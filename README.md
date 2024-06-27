@@ -1,8 +1,8 @@
 # UILibHub
 
-English | [中文](./README-zh.md)
-
 ![UILibHub](./banner.jpg)
+
+English | [中文](./README-zh.md)
 
 Welcome to contribute to [UILibHub](https://uilibhub.com)! You can:
 - Recommend or self-nominate UI libraries
