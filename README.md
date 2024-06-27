@@ -3,7 +3,7 @@
 欢迎为 [UILibHub](https://uilibhub.com) 贡献内容！您可以：
 - 推荐或自荐 UI 库
 - 提交使用本站已收录 UI 库的网站（作为 UI 库示例展示）
-请通过提交 [Issue]() 来分享您的建议。
+请通过提交 [Issue](https://github.com/aidevtoolkit/uilibhub/issues) 来分享您的建议。
 
 ## UI 库提交格式
 如果您要提交 UI 库，请使用以下格式。`filterMatchings` 具体字段说明请查看[这里](https://uilibhub.com/about) ：
