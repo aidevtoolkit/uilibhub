@@ -1,6 +1,6 @@
 # UILibHub
 
-[English](./READMD.md) | 中文
+[English](./README.md) | 中文
 
 欢迎为 [UILibHub](https://uilibhub.com) 贡献内容！您可以：
 - 推荐或自荐 UI 库
