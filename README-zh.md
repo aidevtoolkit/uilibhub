@@ -1,6 +1,6 @@
 # UILibHub
 
-![UILibHub](./banner2.jpg)
+![UILibHub](./banner.jpg)
 
 [English](./README.md) | 中文
 
