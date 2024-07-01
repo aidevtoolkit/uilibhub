@@ -96,3 +96,11 @@
 - 简短说明（可选）：描述该网站如何使用了 UI 库或其特色之处
 
 我们期待您的贡献，共同丰富 UILibHub 的资源库！
+
+## 关于我
+你可以在 X（Twitter）上联系我: https://x.com/luobogor
+
+如果这个项目对你有帮助，可以请我喝杯咖啡。
+
+![support-code](https://github.com/aidevtoolkit/uilibhub/assets/22536029/0394b9dd-8ced-4dca-b9cf-914a1b81a175)
+
