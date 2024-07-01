@@ -98,6 +98,6 @@ If you're submitting a website that uses a UI library already listed on our plat
 We look forward to your contributions to help enrich the UILibHub resource library!
 
 ## Other Things
-you can contact me at X(Twitter): https://x.com/luobogor
+you can contact me at X(Twitter): https://x.com/luobogooooo
 
 if this project is helpful to you, [buy me a coffee](https://ko-fi.com/luobogor).
