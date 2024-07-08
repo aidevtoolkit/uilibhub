@@ -5,7 +5,7 @@
 English | [中文](./README-zh.md)
 
 ## What is UILibHub?
-UILibHub is dedicated to collecting and sharing high-quality resources for React, Vue, and Mini Program component libraries. We provide the most up-to-date and comprehensive recommendations for component libraries, empowering developers to efficiently build modern applications. The website is developed based on David Dahan's open-source project [UI Libs](https://github.com/ddahan/ui-libs), to whom we extend our gratitude. We've made the following key modifications to UI Libs:
+UILibHub focuses on collecting and sharing high-quality resources for React, Vue, and Mini Program component libraries. UILibHub provides the latest and most comprehensive component library recommendations, helping developers efficiently build modern applications. The website is developed based on David Dahan's open-source project [UI Libs](https://github.com/ddahan/ui-libs), for which we are grateful. The main modifications to UI Libs include:
 
 ### Feature Enhancements
 1. **Expanded Library Collection**: Added UI libraries for React, mobile, and mini programs, currently featuring over **30** high-quality UI libraries.
@@ -21,47 +21,14 @@ UILibHub is dedicated to collecting and sharing high-quality resources for React
 2. **SEO Optimization**: Improved meta tags for each page to enhance search engine visibility.
 3. **Traffic Analytics Integration**: Integrated Google Tag Manager for easy data analysis. Modify `app.vue` and replace `YOUR-GTM-ID` with your own GTM ID.
 
+Learn more about features at [https://uilibhub.com/about](https://uilibhub.com/about)
 
-## Key Features
+## Submit a Project
+Contributions to UILibHub are welcome! You can:
+- Recommend or self-nominate UI libraries
+- Submit websites using UI libraries listed on our site (to be showcased as UI library examples)
 
-### Filter by Main Features
-Filter components by main features with the following options:
-- React：Made for React framework.
-- Vue：Made for Vue framework.
-- Mini Program：Made for Mini Program.
-- Mobile：Mobile-friendly component library support.
-- Tailwind CSS：The library uses Tailwind CSS itself and allows you to use it to customize components. As a Tailwind CSS user, this allows to keep a unique tool for all your styling.
-- Styled：Styled components come with opinated style. You usually customize them by overriding these styles.
-- Unstyled：Unstyled components come with no style and force you to write your own.
-- Imported：You depends on an external library from which you import components. You benefits from library updates but can not directly customize components since it's not your own code.
-- Pasted：You depends on no external library and need to copy paste component code into your own project. After pasting the code, it's yours and you can customize it as you want. However, you can't benefit from the updates automatically.
-- Components：Provide components handling both logic and stying (or logic only if unstyled), but it is coupled to the Vue/React framework.
-- CSS only：Only provide CSS classes to inject into your own components. You get no logic, but the library can be used with any framework (not only Vue/React).
-- Free：The UI Library is entirely free for all available components.
-
-### Filter by Additional Features
-Filter components by secondary features with the following options:
-- Fully Accessible：All components are designed with accessibility in mind.
-- Built-in Themes：Provide different themes ready to be used.
-- Theme Generator：Provide a tool to help developers generate new themes in an easy way.
-- Dark Mode：Components are designed to support both a light and dark version.
-- Semantic Colors：Colors can be associated with particular meanings, like 'primary', 'secondary', etc.
-- Figma files：Figma is the leading design tool. Figma files contain the same components that the UI Library, so that designers can create designs without coding skills.
-- Official：Made by a team responsible for managing a framework itself.
-- Public Roadmap：A public roadmap is available to help you see next library features.
-- RTL support：Ability to display text that is written from right to left (Arabic, Hebrew, etc.)
-- Fully Typed：Provided components are all typed to help developers with auto-completion and potential errors.
-- Form Helpers：Provided tools or examples for integration with form management libraries (Vee-Validate, Zod, Yup, etc.)
-
-### Filter by Metrics
-Filter components based on the number of components, GitHub stars, and weekly NPM downloads.
-
-## Submission Guide
-Welcome to contribute to UILibHub! You can:  
-- Recommend or self-recommend a UI library
-- Submit a website that uses a UI library already included on this site (as a UI library example display)
-
-Please refer to the [Project Submission Guide](https://github.com/aidevtoolkit/uilibhub/docs/submission-guide.md) for submitting a project.
+For project submissions, please refer to the [Submission Guide](https://github.com/aidevtoolkit/uilibhub/blob/main/docs/submission-guide-en.md).
 
 ## Tech Stack
 - [Nuxt3](https://nuxt.com/): Vue3 server-side rendering framework
@@ -81,13 +48,7 @@ This template is ideal for building various resource navigation websites, such a
 
 It offers powerful filtering functionality, multi-language support, and good SEO optimization, allowing for quick setup of professional navigation websites.
 
-## FAQ
-
-**Q: How often is UILibHub data updated?**
-
-**A:** GitHub stars and weekly NPM downloads are updated on the 1st of each month, while component counts are updated quarterly.
-
 ## Other Things
-you can contact me at X(Twitter): https://x.com/luobogooooo
+you can contact me at X(Twitter): https://x.com/luobogor
 
 if this project is helpful to you, [buy me a coffee](https://ko-fi.com/luobogor).
