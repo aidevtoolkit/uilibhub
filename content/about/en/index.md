@@ -16,12 +16,6 @@ UILibHub is dedicated to collecting and sharing high-quality resources for React
 4. **Pagination**: Improves browsing experience for large amounts of data.
 5. **Detail Page Improvements**: Added component library detail pages, including feature introductions, component previews, and related links.
 
-### Technical Optimizations
-1. **Markdown Support**: Use Markdown syntax to write static page content.
-2. **SEO Optimization**: Improved meta tags for each page to enhance search engine visibility.
-3. **Traffic Analytics Integration**: Integrated Google Tag Manager for easy data analysis. Modify `app.vue` and replace `YOUR-GTM-ID` with your own GTM ID.
-
-
 ## Key Features
 
 ### Filter by Main Features
@@ -61,7 +55,7 @@ Welcome to contribute to UILibHub! You can:
 - Recommend or self-recommend a UI library
 - Submit a website that uses a UI library already included on this site (as a UI library example display)
 
-Please refer to the [Project Submission Guide](https://github.com/aidevtoolkit/uilibhub/docs/submission-guide.md) for submitting a project.
+Please refer to the [Project Submission Guide](https://github.com/aidevtoolkit/uilibhub/blob/main/docs/submission-guide.md) for submitting a project.
 
 ## Tech Stack
 - [Nuxt3](https://nuxt.com/): Vue3 server-side rendering framework
@@ -70,16 +64,6 @@ Please refer to the [Project Submission Guide](https://github.com/aidevtoolkit/u
 - [Nuxt Content](https://content.nuxt.com/): Markdown content management
 - [Tailwind CSS](https://tailwindcss.com/): Utility-first CSS framework
 - [TypeScript](https://www.typescriptlang.org/): Static type checking
-
-## What can this open-source template be used for?
-This template is ideal for building various resource navigation websites, such as:
-- Technology tool navigation
-- Learning resource directories
-- Industry solution indexes
-- Design resource libraries
-- Open-source project showcases
-
-It offers powerful filtering functionality, multi-language support, and good SEO optimization, allowing for quick setup of professional navigation websites.
 
 ## FAQ
 

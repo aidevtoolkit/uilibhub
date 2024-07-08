@@ -1,8 +1,6 @@
-# UILibHub
+# UILibHub Submission Guide
 
-![UILibHub](./docs/banner.jpg)
-
-English | [中文](./README-zh.md)
+English | [中文](./submission-guide-zh.md)
 
 Welcome to contribute to [UILibHub](https://uilibhub.com)! You can:
 - Recommend or self-nominate UI libraries
@@ -96,8 +94,3 @@ If you're submitting a website that uses a UI library already listed on our plat
 - Brief Description (optional): Explain how the website utilizes the UI library or its notable features
 
 We look forward to your contributions to help enrich the UILibHub resource library!
-
-## Other Things
-you can contact me at X(Twitter): https://x.com/luobogooooo
-
-if this project is helpful to you, [buy me a coffee](https://ko-fi.com/luobogor).

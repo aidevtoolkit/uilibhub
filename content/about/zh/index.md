@@ -16,11 +16,6 @@ UILibHub 专注收集和分享 React、Vue 和小程序组件库的优质资源�
 4. **分页功能**：提高大量数据的浏览体验。
 5. **详情页改进**：新增组件库详情页，包括功能介绍、组件预览、相关链接等。
 
-### 技术优化
-1**Markdown 支持**：使用 Markdown 语法编写静态页面内容。
-2**SEO 优化**：完善每个页面的元标签，提高搜索引擎可见性。
-3**流量统计集成**：集成 Google Tag Manager，便于数据分析。修改 `app.vue`，替换 `YOUR-GTM-ID` 为自己的 GTM ID 即可。
-
 ## 主要功能
 
 ### 按主要功能筛选
@@ -69,16 +64,6 @@ UILibHub 专注收集和分享 React、Vue 和小程序组件库的优质资源�
 - [Nuxt Content](https://content.nuxt.com/)：Markdown 内容管理
 - [Tailwind CSS](https://tailwindcss.com/)：实用优先的 CSS 框架
 - [TypeScript](https://www.typescriptlang.org/)：静态类型检查
-
-## 这个开源模板可以用来做什么？
-本模板非常适合构建各类资源导航网站，例如：
-- 技术工具导航
-- 学习资源目录
-- 行业解决方案索引
-- 设计资源库
-- 开源项目showcase
-
-它提供了强大的筛选功能、多语言支持和良好的SEO优化，可以快速搭建专业的导航类网站。
 
 ## 常见问题
 
