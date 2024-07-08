@@ -1,7 +1,7 @@
 export default defineAppConfig({
   ui: {
     strategy: "merge",
-    primary: "emerald",
+    primary: "blue",
     gray: "slate",
     tooltip: {
       // removes fixed height and truncate
@@ -9,7 +9,5 @@ export default defineAppConfig({
       popper: { placement: "top" },
     },
   },
-  repoUrl: "https://github.com/ddahan/ui-libs",
-  myWebsiteUrl: "https://david-dahan.com",
-  myContactUrl: "https://david-dahan.com/contact",
+  repoUrl: "https://github.com/aidevtoolkit/uilibhub",
 })

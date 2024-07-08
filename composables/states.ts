@@ -4,6 +4,8 @@ let initialButtonFiltering: { [K in ButtonFilterID]: { selected: boolean } } = {
   FImported: { selected: false },
   FPasted: { selected: false },
   FTailwind: { selected: false },
+  FMobile: { selected: false },
+  FMiniProgram: { selected: false },
   FComponents: { selected: false },
   FCSS: { selected: false },
   FAccessible: { selected: false },
@@ -18,7 +20,7 @@ let initialButtonFiltering: { [K in ButtonFilterID]: { selected: boolean } } = {
   FThemeGenerator: { selected: false },
   FSemanticColors: { selected: false },
   FVue: { selected: false },
-  FNuxt: { selected: false },
+  FReact: { selected: false },
   FForm: { selected: false },
 }
 
@@ -34,6 +36,7 @@ import { buttonFilters } from "@/data/filters"
 export const useFilterStore = () => {
   const buttonFiltering = useState("buttonFilterStore", () => initialButtonFiltering)
   const rangeFiltering = useState("rangeFilterStore", () => initialRangeFiltering)
+  const localeRoute = useLocaleRoute()
 
   // run when a filter button is clicked
   const invertButtonFiltering = (filterID: ButtonFilterID) => {
@@ -47,11 +50,15 @@ export const useFilterStore = () => {
     if (oldSelected === false && !!autoDisable) {
       buttonFiltering.value[autoDisable].selected = false
     }
+
+    navigateTo(localeRoute({ path: '/' }))
   }
 
   // run when a range is changed
   const changeRangeFiltering = (rangeFilterID: RangeFilterID, qty: number) => {
     rangeFiltering.value[rangeFilterID].qty = qty
+
+    navigateTo(localeRoute({ path: '/' }))
   }
 
   const touchedButtonFilterIDs = () => <ButtonFilterID[]>Object.entries(
@@ -79,6 +86,8 @@ export const useFilterStore = () => {
     for (let rangeFilterID of <RangeFilterID[]>Object.keys(rangeFiltering.value)) {
       rangeFiltering.value[rangeFilterID].qty = 0
     }
+
+    navigateTo(localeRoute({ path: '/' }))
   }
 
   return {

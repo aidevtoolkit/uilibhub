@@ -3,19 +3,23 @@
   "private": true,
   "scripts": {
     "build": "nuxt build",
-    "dev": "nuxt dev --no-fork",
+    "dev": "NODE_OPTIONS=--max-old-space-size=8192 nuxt dev --no-fork",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
+    "@nuxt/content": "^2.13.0",
     "@nuxt/devtools": "latest",
     "@nuxt/ui": "latest",
+    "@nuxtjs/i18n": "^8.0.0",
     "@tailwindcss/typography": "latest",
     "@types/node": "latest",
+    "lodash-es": "^4.17.21",
     "nuxt": "3.10.x",
     "prettier": "latest",
-    "prettier-plugin-tailwindcss": "latest"
+    "prettier-plugin-tailwindcss": "latest",
+    "query-string": "^9.0.0"
   },
   "dependencies": {
     "@iconify/json": "latest"

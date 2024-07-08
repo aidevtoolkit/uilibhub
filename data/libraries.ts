@@ -1,799 +1,1494 @@
-import { Library } from "@/types/libraries.types"
+import { upperFirst } from "lodash-es"
+// import { Library } from "@/types/libraries.types"
+import { addUtmParams } from "@/utils/util"
 
-export const libraries: Array<Library> = [
+export const libraries = [
   {
-    name: "Nuxt UI",
-    logo: "nuxt.svg",
-    url: "https://ui.nuxt.com",
-    repoOwner: "nuxtlabs",
-    repoName: "ui",
-    package: "@nuxt/ui",
-    componentMatchings: [
-      "Accordion",
-      "Alert",
-      "Avatar",
-      "Badge",
-      "Button",
-      // "Date Picker" // Available only as un example using dependency
-      "Dropdown",
-      "Keyboard Key",
-      "Input",
-      "Textarea",
-      "Select",
-      "Dropdown",
-      "Checkbox",
-      "Radio",
-      "Toggle",
-      "Range",
-      "Table",
-      "Vertical Navigation",
-      "Command Palette",
-      "Pagination",
-      "Tabs",
-      "Modal",
-      "Slideover",
-      "Popover",
-      "Tooltip",
-      "Context Menu",
-      "Toast",
-      "Card",
-      "Container",
-      "Skeleton",
-      "Divider",
-      "Progress",
+    "name": "Mantine",
+    "logo": "mantine.svg",
+    "url": "https://mantine.dev/",
+    "iframeUrl": "https://mantine.dev/core/button/",
+    "repoOwner": "mantinedev",
+    "repoName": "mantine",
+    "package": "@mantine/core",
+    "componentCount": 99,
+    "filterMatchings": [
+      {
+        "id": "FMobile"
+      },
+      {
+        "id": "FStyled"
+      },
+      {
+        "id": "FImported"
+      },
+      {
+        "id": "FComponents"
+      },
+      {
+        "id": "FReact"
+      },
+      {
+        "id": "FFree"
+      },
+      {
+        "id": "FAccessible"
+      },
+      {
+        "id": "FBuiltinThemes"
+      },
+      {
+        "id": "FThemeGenerator"
+      },
+      {
+        "id": "FDarkMode"
+      },
+      {
+        "id": "FFigma"
+      },
+      {
+        "id": "FSemanticColors"
+      },
+      {
+        "id": "FRTLSupport"
+      },
+      {
+        "id": "FForm"
+      },
+      {
+        "id": "FTyped"
+      }
     ],
-    filterMatchings: [
-      { id: "FStyled" },
-      { id: "FImported" },
-      { id: "FTailwind" },
-      { id: "FComponents" },
-      { id: "FFree" },
-      { id: "FAccessible" },
-      { id: "FSemanticColors" },
-      { id: "FDarkMode" },
-      { id: "FOfficial" },
-      { id: "FRoadmap" },
-      { id: "FRTLSupport" },
-      { id: "FTyped" },
-      { id: "FNuxt" },
-      { id: "FForm" },
-      { id: "FFigma" }, // https://www.figma.com/community/file/1288455405058138934/nuxt-ui
+    "nbStars": 25149,
+    "nbDownloads": 367737,
+  },
+  {
+    "name": "Material UI",
+    "logo": "mui.png",
+    "url": "https://mui.com/material-ui/",
+    "cantPreview": true,
+    "repoOwner": "mui",
+    "repoName": "material-ui",
+    "package": "@mui/material",
+    "componentCount": 59,
+    "filterMatchings": [
+      {
+        "id": "FMobile"
+      },
+      {
+        "id": "FStyled"
+      },
+      {
+        "id": "FImported"
+      },
+      {
+        "id": "FComponents"
+      },
+      {
+        "id": "FReact"
+      },
+      {
+        "id": "FFree"
+      },
+      {
+        "id": "FAccessible"
+      },
+      {
+        "id": "FBuiltinThemes"
+      },
+      {
+        "id": "FThemeGenerator"
+      },
+      {
+        "id": "FDarkMode"
+      },
+      {
+        "id": "FSemanticColors"
+      },
+      {
+        "id": "FFigma"
+      },
+      {
+        "id": "FSemanticColors"
+      },
+      {
+        "id": "FRoadmap"
+      },
+      {
+        "id": "FRTLSupport"
+      },
+      {
+        "id": "FForm"
+      },
+      {
+        "id": "FTyped"
+      }
+    ],
+    "nbStars": 92293,
+    "nbDownloads": 3713911
+  },
+  {
+    "name": "Tailspark",
+    "logo": "favicon.ico",
+    "url": "https://tailspark.co",
+    "iframeUrl": "https://tailspark.co/components?category=marketing",
+    "componentCount": 350,
+    "filterMatchings": [
+      {
+        "id": "FMobile"
+      },
+      {
+        "id": "FStyled"
+      },
+      {
+        "id": "FReact"
+      },
+      {
+        "id": "FVue"
+      },
+      {
+        "id": "FTailwind"
+      },
+      {
+        "id": "FPasted"
+      },
+      {
+        "id": "FDarkMode"
+      },
+      {
+        "id": "FFigma"
+      }
+    ]
+  },
+  {
+    "name": "TailwindFlex",
+    "logo": "tailwind-flex.svg",
+    "url": "https://tailwindflex.com/",
+    "componentCount": 1400,
+    "filterMatchings": [
+      {
+        "id": "FMobile"
+      },
+      {
+        "id": "FTailwind"
+      },
+      {
+        "id": "FPasted"
+      },
+      {
+        "id": "FStyled"
+      },
+      {
+        "id": "FReact"
+      },
+      {
+        "id": "FVue"
+      },
+      {
+        "id": "FFree"
+      }
     ],
   },
   {
-    name: "PrimeVue",
-    logo: "primevue.svg",
-    url: "https://primevue.org",
-    repoOwner: "primefaces",
-    repoName: "primevue",
-    package: "primevue",
-    componentMatchings: [
-      "Auto Complete",
-      "Date Picker",
-      "Select",
-      "Checkbox",
-      "Input Chips",
-      "Color Picker",
-      "Dropdown",
-      "Rich Text Editor",
-      "Input Mask",
-      "Toggle",
-      "Button",
-      "Select Button",
-      "Toggle Button",
-      "Input",
-      "Knob",
-      "Password Indicator",
-      "Radio",
-      "Rating",
-      "Range",
-      "Textarea",
-      "Speed Dial",
-      "Table",
-      "Order List",
-      "Tree",
-      "Pagination",
-      "Pick List",
-      "Timeline",
-      "Virtual Scroller",
-      "Accordion",
-      "Card",
-      "Divider",
-      "Scroll Bar",
-      "Panel Splitter",
-      "Tabs",
-      "Modal",
-      "Popover",
-      "Slideover",
-      "Tooltip",
-      "File Input",
-      "Breadcrumb",
-      "Context Menu",
-      "Dock",
-      "Vertical Navigation",
-      "Steps",
-      "Alert",
-      "Toast",
-      "Carousel",
-      "Avatar",
-      "Badge",
-      "Indicator",
-      "Scroll Top",
-      "Skeleton",
-      "Progress",
-      "Listbox",
+    "name": "Ant Design",
+    "logo": "ant-design.png",
+    "url": "https://ant.design/",
+    "iframeUrl": "https://ant.design/components/button/",
+    "repoOwner": "ant-design",
+    "repoName": "ant-design",
+    "package": "antd",
+    "componentCount": 68,
+    "filterMatchings": [
+      {
+        "id": "FStyled"
+      },
+      {
+        "id": "FImported"
+      },
+      {
+        "id": "FComponents"
+      },
+      {
+        "id": "FReact"
+      },
+      {
+        "id": "FFree"
+      },
+      {
+        "id": "FFigma"
+      },
+      {
+        "id": "FSemanticColors"
+      },
+      {
+        "id": "FForm"
+      }
     ],
-    filterMatchings: [
-      { id: "FStyled" },
-      { id: "FUnstyled" },
-      { id: "FImported" },
-      { id: "FTailwind" }, // but not forced, two versions
-      { id: "FComponents" },
-      { id: "FAccessible" },
-      { id: "FFigma" },
-      { id: "FFree" }, // not for Figma
-      { id: "FRoadmap" }, // https://primevue.org/roadmap/
-      { id: "FThemeGenerator" }, // https://designer.primevue.org/
-      { id: "FBuiltinThemes" }, // https://primevue.org/theming/#builtinthemes
-      { id: "FSemanticColors" }, // https://primevue.org/colors/
-      { id: "FVue" },
-      { id: "FTyped" },
-      { id: "FForm" },
-      { id: "FDarkMode" },
-    ],
+    "nbStars": 90847,
+    "nbDownloads": 1406198
   },
   {
-    name: "Quasar",
-    logo: "quasar.svg",
-    logoDark: "quasar_dark.svg",
-    url: "https://quasar.dev",
-    repoOwner: "quasarframework",
-    repoName: "quasar",
-    package: "quasar",
-    componentMatchings: [
-      "Avatar",
-      "Indicator",
-      "Badge",
-      "Breadcrumb",
-      "Button",
-      "Dropdown",
-      "Card",
-      "Carousel",
-      "Chat Bubble",
-      "Progress",
-      "Color Picker",
-      "Modal",
-      "Rich Text Editor",
-      "Accordion",
-      "Speed Dial",
-      "Input",
-      "Select",
-      "File Input",
-      "Radio",
-      "Checkbox",
-      "Toggle",
-      "Range",
-      "Date Picker",
-      "Knob",
-      "Table",
-      "Pagination",
-      "Rating",
-      "Divider",
-      "Skeleton",
-      "Panel Splitter",
-      "Steps",
-      "Tabs",
-      "Timeline",
-      "Tooltip",
-      "Tree",
-      "Virtual Scroller",
+    "name": "Ant Design Vue",
+    "logo": "antvue.svg",
+    "url": "https://antdv.com",
+    "iframeUrl": "https://antdv.com/components/button",
+    "repoOwner": "vueComponent",
+    "repoName": "ant-design-vue",
+    "package": "ant-design-vue",
+    "componentCount": 68,
+    "filterMatchings": [
+      {
+        "id": "FStyled"
+      },
+      {
+        "id": "FImported"
+      },
+      {
+        "id": "FComponents"
+      },
+      {
+        "id": "FVue"
+      },
+      {
+        "id": "FFree"
+      },
+      {
+        "id": "FFigma"
+      },
+      {
+        "id": "FSemanticColors"
+      },
+      {
+        "id": "FForm"
+      }
     ],
-    filterMatchings: [
-      { id: "FVue" },
-      { id: "FRTLSupport" }, // https://quasar.dev/options/rtl-support/
-      { id: "FThemeGenerator" }, // https://quasar.dev/style/theme-builder
-      { id: "FDarkMode" }, // https://quasar.dev/style/dark-mode
-      { id: "FStyled" },
-      { id: "FImported" },
-      { id: "FComponents" },
-      { id: "FFree" },
-      { id: "FRoadmap" }, // https://github.com/quasarframework/quasar/blob/dev/ROADMAP.md
-      { id: "FSemanticColors" },
-    ],
+    "nbStars": 19802,
+    "nbDownloads": 108925
   },
   {
-    name: "Vuetify",
-    logo: "vuetify.svg",
-    url: "https://vuetifyjs.com",
-    repoOwner: "vuetifyjs",
-    repoName: "vuetify",
-    package: "vuetify",
-    componentMatchings: [
-      "Button",
-      "Card",
-      "Badge",
-      "Divider",
-      "Accordion",
-      "Dropdown",
-      "Modal",
-      "Tooltip",
-      "Slideover",
-      "Pagination",
-      "Bottom Tabs",
-      "Breadcrumb",
-      "Tabs",
-      "Auto Complete",
-      "Input",
-      "Checkbox",
-      "Toggle",
-      "Radio",
-      "File Input",
-      "OTP Input",
-      "Select",
-      "Range",
-      "Textarea",
-      "Carousel",
-      "Steps",
-      "Table",
-      "Virtual Scroller",
-      "Alert",
-      "Indicator",
-      "Skeleton",
-      "Toast",
-      "Rating",
-      "Timeline",
-      "Progress",
-      "Avatar",
-      "Color Picker",
-      "Date Picker",
+    "name": "Daisy UI",
+    "repoOwner": "saadeghi",
+    "repoName": "daisyui",
+    "package": "daisyui",
+    "logo": "daisyui.svg",
+    "url": "https://daisyui.com/?aff=qjOrK",
+    "showUrl": "https://daisyui.com",
+    "iframeUrl": "https://daisyui.com/components/button/",
+    "componentCount": 56,
+    "filterMatchings": [
+      {
+        "id": "FMobile"
+      },
+      {
+        "id": "FStyled"
+      },
+      {
+        "id": "FImported"
+      },
+      {
+        "id": "FCSS"
+      },
+      {
+        "id": "FTailwind"
+      },
+      {
+        "id": "FFree"
+      },
+      {
+        "id": "FBuiltinThemes"
+      },
+      {
+        "id": "FThemeGenerator"
+      },
+      {
+        "id": "FSemanticColors"
+      },
+      {
+        "id": "FDarkMode"
+      },
+      {
+        "id": "FVue"
+      },
+      {
+        "id": "FReact"
+      },
+      {
+        "id": "FRTLSupport"
+      }
     ],
-    filterMatchings: [
-      { id: "FStyled" },
-      { id: "FImported" },
-      { id: "FComponents" },
-      { id: "FAccessible" }, // https://vuetifyjs.com/en/features/accessibility/
-      { id: "FVue" },
-      { id: "FRoadmap" }, // https://vuetifyjs.com/en/introduction/roadmap/
-      { id: "FFree" },
-      { id: "FFigma" }, // https://store.vuetifyjs.com/products/vuetify-ui-kit-figma
-      { id: "FDarkMode" },
-      { id: "FThemeGenerator" },
-      { id: "FSemanticColors" },
-      { id: "FBuiltinThemes" }, // https://vuetifyjs.com/en/resources/themes/
-      { id: "FForm" }, // https://vuetifyjs.com/en/components/forms/
-    ],
+    "nbStars": 31827,
+    "nbDownloads": 279409
   },
   {
-    name: "Radix Vue",
-    logo: "radixvue.svg",
-    url: "https://www.radix-vue.com/",
-    repoOwner: "radix-vue",
-    repoName: "radix-vue",
-    package: "radix-vue",
-    componentMatchings: [
-      "Accordion",
-      "Modal", // Alert Dialog
-      "Avatar",
-      "Checkbox",
-      // Collapsible -> Accordion
-      "Dropdown", // Combobox
-      "Context Menu",
-      // Dialog -> Modal
-      // Dropdown
-      "Tooltip", // Hover Card
-      // Label
-      // Menubar
-      // Navigation Menu
-      "Pagination",
-      "Popover",
-      "Progress",
-      "Radio",
-      "Scroll Bar",
-      "Select",
-      "Divider", // Separator
-      "Range", // Slider
-      "Toggle", // switch
-      "Tabs",
-      "Toast",
-      "Toggle Button",
-      // Toggle Group
-      // Toolbar
+    "name": "Element Plus",
+    "logo": "element-plus.svg",
+    "url": "https://element-plus.org",
+    "iframeUrl": "https://element-plus.org/zh-CN/component/button.html",
+    "repoOwner": "element-plus",
+    "repoName": "element-plus",
+    "package": "element-plus",
+    "componentCount": 76,
+    "filterMatchings": [
+      {
+        "id": "FStyled"
+      },
+      {
+        "id": "FVue"
+      },
+      {
+        "id": "FTyped"
+      },
+      {
+        "id": "FDarkMode"
+      },
+      {
+        "id": "FRoadmap"
+      },
+      {
+        "id": "FImported"
+      },
+      {
+        "id": "FComponents"
+      },
+      {
+        "id": "FFree"
+      },
+      {
+        "id": "FFigma"
+      },
+      {
+        "id": "FSemanticColors"
+      },
+      {
+        "id": "FForm"
+      }
     ],
-    filterMatchings: [
-      { id: "FVue" },
-      { id: "FUnstyled" },
-      { id: "FImported" },
-      { id: "FComponents" },
-      { id: "FFree" },
-      { id: "FAccessible" },
-      { id: "FTyped" },
-      { id: "FRoadmap" }, // https://github.com/orgs/radix-vue/projects/1
-    ],
+    "nbStars": 23605,
+    "nbDownloads": 234265
   },
   {
-    name: "Shadcn-vue",
-    subName: "on top of Radix Vue",
-    logo: "shadcn.png",
-    url: "https://www.shadcn-vue.com",
-    repoOwner: "radix-vue",
-    repoName: "shadcn-vue",
-    package: "shadcn-vue",
-    componentMatchings: [
-      "Accordion",
-      "Alert",
-      "Modal",
-      "Avatar",
-      "Badge",
-      "Button",
-      "Card",
-      "Checkbox",
-      "Dropdown",
-      "Command Palette",
-      "Context Menu",
-      "Date Picker",
-      "Popover",
-      "Input",
-      "Progress",
-      "Scroll Bar",
-      "Select",
-      "Divider",
-      "Slideover",
-      "Skeleton",
-      "Range",
-      "Toggle",
-      "Table",
-      "Tabs",
-      "Textarea",
-      "Tooltip",
+    "name": "Next UI",
+    "logo": "nextui.png",
+    "url": "https://nextui.org/",
+    "iframeUrl": "https://nextui.org/docs/components/button",
+    "repoOwner": "nextui-org",
+    "repoName": "nextui",
+    "package": "@nextui-org/react",
+    "componentCount": 55,
+    "filterMatchings": [
+      {
+        "id": "FMobile"
+      },
+      {
+        "id": "FStyled"
+      },
+      {
+        "id": "FImported"
+      },
+      {
+        "id": "FTailwind"
+      },
+      {
+        "id": "FComponents"
+      },
+      {
+        "id": "FFree"
+      },
+      {
+        "id": "FAccessible"
+      },
+      {
+        "id": "FSemanticColors"
+      },
+      {
+        "id": "FDarkMode"
+      },
+      {
+        "id": "FRoadmap"
+      },
+      {
+        "id": "FThemeGenerator"
+      },
+      {
+        "id": "FRTLSupport"
+      },
+      {
+        "id": "FTyped"
+      },
+      {
+        "id": "FReact"
+      }
     ],
-    filterMatchings: [
-      { id: "FStyled" },
-      { id: "FPasted" },
-      { id: "FTailwind" },
-      { id: "FComponents" },
-      { id: "FVue" },
-      { id: "FThemeGenerator" },
-      { id: "FDarkMode" },
-      { id: "FFigma" },
-      { id: "FFree" },
-      { id: "FAccessible" },
-    ],
+    "nbStars": 20295,
+    "nbDownloads": 112733
   },
   {
-    name: "Headless UI",
-    repoOwner: "tailwindlabs",
-    repoName: "headlessui",
-    package: "@headlessui/vue",
-    logo: "headlessui.svg",
-    url: "https://headlessui.com/",
-    componentMatchings: [
-      "Dropdown",
-      "Command Palette",
-      "Toggle",
-      "Accordion",
-      "Modal",
-      "Popover",
-      "Radio",
-      "Tabs",
+    "name": "Nuxt UI",
+    "logo": "nuxt.svg",
+    "url": "https://ui.nuxt.com",
+    "iframeUrl": "https://ui.nuxt.com/components/button",
+    "repoOwner": "nuxtlabs",
+    "repoName": "ui",
+    "package": "@nuxt/ui",
+    "componentCount": 55,
+    "filterMatchings": [
+      {
+        "id": "FMobile"
+      },
+      {
+        "id": "FStyled"
+      },
+      {
+        "id": "FImported"
+      },
+      {
+        "id": "FTailwind"
+      },
+      {
+        "id": "FComponents"
+      },
+      {
+        "id": "FFree"
+      },
+      {
+        "id": "FAccessible"
+      },
+      {
+        "id": "FSemanticColors"
+      },
+      {
+        "id": "FDarkMode"
+      },
+      {
+        "id": "FOfficial"
+      },
+      {
+        "id": "FRoadmap"
+      },
+      {
+        "id": "FRTLSupport"
+      },
+      {
+        "id": "FTyped"
+      },
+      {
+        "id": "FVue"
+      },
+      {
+        "id": "FForm"
+      },
+      {
+        "id": "FFigma"
+      }
     ],
-    filterMatchings: [
-      { id: "FUnstyled" },
-      { id: "FComponents" },
-      { id: "FImported" },
-      { id: "FTailwind" },
-      { id: "FAccessible" },
-      { id: "FFree" },
-      { id: "FOfficial" },
-      { id: "FVue" },
-    ],
+    "nbStars": 3526,
+    "nbDownloads": 38028
   },
   {
-    name: "Tailwind UI",
-    subName: "on top of Headless UI",
-    logo: "tailwind.svg",
-    url: "https://tailwindui.com",
-    componentMatchings: [
-      "Popover",
-      "Select",
-      "Input",
-      "Textarea",
-      "Radio",
-      "Checkbox",
-      "Toggle",
-      "Modal",
-      "Alert",
-      "Pagination",
-      "Tabs",
-      "Vertical Navigation",
-      "Slideover",
-      "Breadcrumb",
-      "Steps",
-      "Command Palette",
-      "Toast",
-      "Avatar",
-      "Badge",
-      "Dropdown",
-      "Button",
-      "Divider",
-      "Container",
-      "Card",
-      "Calendar",
+    "name": "Radix",
+    "logo": "radix.svg",
+    "url": "https://www.radix-ui.com/",
+    "iframeUrl": "https://www.radix-ui.com/themes/docs/components/button",
+    "repoOwner": "radix-ui",
+    "repoName": "primitives",
+    "componentCount": 28,
+    "filterMatchings": [
+      {
+        "id": "FMobile"
+      },
+      {
+        "id": "FReact"
+      },
+      {
+        "id": "FUnstyled"
+      },
+      {
+        "id": "FImported"
+      },
+      {
+        "id": "FComponents"
+      },
+      {
+        "id": "FFree"
+      },
+      {
+        "id": "FAccessible"
+      },
+      {
+        "id": "FTyped"
+      }
     ],
-    filterMatchings: [
-      { id: "FStyled" },
-      { id: "FPasted" },
-      { id: "FComponents" },
-      { id: "FTailwind" },
-      { id: "FAccessible" },
-      { id: "FOfficial" },
-    ],
+    "nbStars": 14779,
+    "nbDownloads": 6728856
   },
   {
-    name: "Naive UI",
-    logo: "naiveui.svg",
-    url: "https://www.naiveui.com/",
-    repoOwner: "tusen-ai",
-    repoName: "naive-ui",
-    package: "naive-ui",
-    componentMatchings: [
-      "Avatar",
-      "Button",
-      "Carousel",
-      "Accordion",
-      "Divider",
-      "Dropdown",
-      "Popover",
-      "Breadcrumb",
-      "Watermark",
-      "Auto Complete",
-      "Color Picker",
-      "Checkbox",
-      "Date Picker",
-      "Input Chips", // dynamic tags
-      "Input",
-      "Radio",
-      "Rating",
-      "Select",
-      "Range",
-      "Toggle",
-      "Pick List",
-      "File Input",
-      "Calendar",
-      "Table",
-      "Timeline",
-      "Tree",
-      "Scroll Spy",
-      "Scroll Top",
-      "Pagination",
-      "Steps",
-      "Tabs",
-      "Alert",
-      "Indicator",
-      "Modal",
-      "Slideover",
-      "Toast",
-      "Progress",
-      "Skeleton",
-      "Tooltip",
-      "Scroll Bar",
+    "name": "Radix Vue",
+    "logo": "radixvue.svg",
+    "url": "https://www.radix-vue.com/",
+    "iframeUrl": "https://www.radix-vue.com/components/accordion.html",
+    "repoOwner": "radix-vue",
+    "repoName": "radix-vue",
+    "package": "radix-vue",
+    "componentCount": 41,
+    "filterMatchings": [
+      {
+        "id": "FMobile"
+      },
+      {
+        "id": "FVue"
+      },
+      {
+        "id": "FUnstyled"
+      },
+      {
+        "id": "FImported"
+      },
+      {
+        "id": "FComponents"
+      },
+      {
+        "id": "FFree"
+      },
+      {
+        "id": "FAccessible"
+      },
+      {
+        "id": "FTyped"
+      },
+      {
+        "id": "FRoadmap"
+      }
     ],
-    filterMatchings: [
-      { id: "FVue" },
-      { id: "FTyped" },
-      { id: "FThemeGenerator" },
-      { id: "FImported" },
-      { id: "FStyled" },
-      { id: "FComponents" },
-      { id: "FFree" },
-      { id: "FSemanticColors" },
-      { id: "FForm" },
-      // { id: "FFigma" }, // sketch, not Figma.
-    ],
+    "nbStars": 2854,
+    "nbDownloads": 64498
   },
   {
-    name: "Daisy UI",
-    repoOwner: "saadeghi",
-    repoName: "daisyui",
-    package: "daisyui",
-    logo: "daisyui.svg",
-    url: "https://daisyui.com",
-    componentMatchings: [
-      "Accordion",
-      "Alert",
-      "Avatar",
-      "Badge",
-      "Bottom Tabs",
-      "Breadcrumb",
-      "Button",
-      "Card",
-      "Carousel",
-      "Chat Bubble",
-      "Checkbox",
-      "Divider",
-      "File Input",
-      "Indicator",
-      "Input",
-      "Keyboard Key",
-      "Vertical Navigation",
-      "Mockup",
-      "Modal",
-      "Pagination",
-      "Progress",
-      "Radio",
-      "Range",
-      "Rating",
-      "Select",
-      "Slideover",
-      "Stack",
-      "Steps",
-      "Swap",
-      "Tabs",
-      "Table",
-      "Textarea",
-      "Toggle",
-      "Tooltip",
-      "Popover",
+    "name": "Shadcn",
+    "subName": "on top of Radix",
+    "subNameZh": "基于 Radix 开发的 UI 库中最流行",
+    "logo": "shadcn-ui.png",
+    "url": "https://ui.shadcn.com/",
+    "iframeUrl": "https://ui.shadcn.com/docs/components/button",
+    "repoOwner": "shadcn-ui",
+    "repoName": "ui",
+    "package": "shadcn-ui",
+    "componentCount": 48,
+    "filterMatchings": [
+      {
+        "id": "FMobile"
+      },
+      {
+        "id": "FStyled"
+      },
+      {
+        "id": "FPasted"
+      },
+      {
+        "id": "FTailwind"
+      },
+      {
+        "id": "FComponents"
+      },
+      {
+        "id": "FReact"
+      },
+      {
+        "id": "FThemeGenerator"
+      },
+      {
+        "id": "FDarkMode"
+      },
+      {
+        "id": "FFigma"
+      },
+      {
+        "id": "FFree"
+      },
+      {
+        "id": "FAccessible"
+      }
     ],
-    filterMatchings: [
-      { id: "FStyled" },
-      { id: "FImported" },
-      { id: "FCSS" },
-      { id: "FTailwind" },
-      { id: "FFree" },
-      { id: "FBuiltinThemes" },
-      { id: "FThemeGenerator" },
-      { id: "FSemanticColors" },
-      { id: "FDarkMode" },
-      { id: "FRTLSupport" },
-    ],
+    "nbStars": 61617,
+    "nbDownloads": 66785
   },
   {
-    name: "Flowbite Vue",
-    logo: "flowbite-vue.svg",
-    url: "https://flowbite-vue.com",
-    repoOwner: "themesberg",
-    repoName: "flowbite-vue",
-    package: "flowbite-vue",
-    componentMatchings: [
-      "Accordion",
-      "Alert",
-      "Avatar",
-      "Breadcrumb",
-      "Button",
-      "Badge",
-      "Card",
-      "Carousel",
-      "Dropdown",
-      "Pagination",
-      "Progress",
-      "Rating",
-      "Table",
-      "Tabs",
-      "Timeline",
-      "Tooltip",
-      "Modal",
-      "Vertical Navigation",
-      "Input",
-      "File Input",
-      "Checkbox",
-      "Select",
-      "Toast",
-      "Toggle",
-      "Textarea",
-      "Range",
-      "Radio",
+    "name": "Shadcn-vue",
+    "subName": "on top of Radix Vue",
+    "subNameZh": "基于 Radix Vue 开发的 UI 库中最流行",
+    "logo": "shadcn.png",
+    "url": "https://www.shadcn-vue.com",
+    "iframeUrl": "https://www.shadcn-vue.com/docs/components/button.html",
+    "repoOwner": "radix-vue",
+    "repoName": "shadcn-vue",
+    "package": "shadcn-vue",
+    "componentCount": 53,
+    "filterMatchings": [
+      {
+        "id": "FMobile"
+      },
+      {
+        "id": "FStyled"
+      },
+      {
+        "id": "FPasted"
+      },
+      {
+        "id": "FTailwind"
+      },
+      {
+        "id": "FComponents"
+      },
+      {
+        "id": "FVue"
+      },
+      {
+        "id": "FThemeGenerator"
+      },
+      {
+        "id": "FDarkMode"
+      },
+      {
+        "id": "FFigma"
+      },
+      {
+        "id": "FFree"
+      },
+      {
+        "id": "FAccessible"
+      }
     ],
-    filterMatchings: [
-      { id: "FStyled" },
-      { id: "FComponents" },
-      { id: "FTailwind" },
-      { id: "FFree" },
-      { id: "FFigma" },
-      { id: "FVue" },
-    ],
+    "nbStars": 3442,
+    "nbDownloads": 2990
   },
   {
-    name: "Element Plus",
-    logo: "element-plus.svg",
-    url: "https://element-plus.org",
-    repoOwner: "element-plus",
-    repoName: "element-plus",
-    package: "element-plus",
-    componentMatchings: [
-      "Button",
-      "Scroll Bar",
-      "Auto Complete",
-      "Checkbox",
-      "Color Picker",
-      "Date Picker",
-      "Input",
-      "Radio",
-      "Rating",
-      "Dropdown",
-      "Range",
-      "Toggle",
-      "Pick List",
-      "File Input",
-      "Avatar",
-      "Indicator",
-      "Calendar",
-      "Card",
-      "Carousel",
-      "Accordion",
-      "Pagination",
-      "Progress",
-      "Skeleton",
-      "Table",
-      "Badge",
-      "Timeline",
-      "Tree",
-      "Scroll Top",
-      "Breadcrumb",
-      "Steps",
-      "Tabs",
-      "Alert",
-      "Modal",
-      "Slideover",
-      "Toast",
-      "Popover",
-      "Tooltip",
-      "Divider",
-      "Virtual Scroller",
+    "name": "PrimeVue",
+    "logo": "primevue.svg",
+    "url": "https://primevue.org",
+    "iframeUrl": "https://primevue.org/button/",
+    "repoOwner": "primefaces",
+    "repoName": "primevue",
+    "package": "primevue",
+    "componentCount": 88,
+    "filterMatchings": [
+      {
+        "id": "FMobile"
+      },
+      {
+        "id": "FStyled"
+      },
+      {
+        "id": "FUnstyled"
+      },
+      {
+        "id": "FImported"
+      },
+      {
+        "id": "FTailwind"
+      },
+      {
+        "id": "FComponents"
+      },
+      {
+        "id": "FAccessible"
+      },
+      {
+        "id": "FFigma"
+      },
+      {
+        "id": "FFree"
+      },
+      {
+        "id": "FRoadmap"
+      },
+      {
+        "id": "FThemeGenerator"
+      },
+      {
+        "id": "FBuiltinThemes"
+      },
+      {
+        "id": "FSemanticColors"
+      },
+      {
+        "id": "FVue"
+      },
+      {
+        "id": "FTyped"
+      },
+      {
+        "id": "FForm"
+      },
+      {
+        "id": "FDarkMode"
+      }
     ],
-    filterMatchings: [
-      { id: "FStyled" },
-      { id: "FVue" },
-      { id: "FTyped" },
-      { id: "FDarkMode" },
-      { id: "FRoadmap" }, // https://github.com/orgs/element-plus/projects/1
-      { id: "FImported" },
-      { id: "FComponents" },
-      { id: "FFree" },
-      { id: "FFigma" }, // https://element-plus.org/en-US/resource/index.html
-      { id: "FSemanticColors" },
-      { id: "FForm" }, // https://element-plus.org/en-US/component/form.html
-    ],
+    "nbStars": 8560,
+    "nbDownloads": 220480
   },
   {
-    name: "Ant Design Vue",
-    logo: "antvue.svg",
-    url: "https://antdv.com",
-    repoOwner: "vueComponent",
-    repoName: "ant-design-vue",
-    package: "ant-design-vue",
-    componentMatchings: [
-      "Button",
-      "Divider",
-      "Breadcrumb",
-      "Dropdown",
-      "Pagination",
-      "Steps",
-      "Auto Complete",
-      "Checkbox",
-      "Date Picker",
-      "Input",
-      "Radio",
-      "Rating",
-      "Select",
-      "Range",
-      "Toggle",
-      "Pick List",
-      "File Input",
-      "Avatar",
-      "Indicator",
-      "Calendar",
-      "Card",
-      "Carousel",
-      "Accordion",
-      "Popover",
-      "Select Button",
-      "Table",
-      "Tabs",
-      "Badge",
-      "Timeline",
-      "Tooltip",
-      "Tour",
-      "Tree",
-      "Alert",
-      "Slideover",
-      "Toast",
-      "Modal",
-      "Progress",
-      "Skeleton",
-      "Speed Dial",
-      "Watermark",
+    "name": "Quasar",
+    "logo": "quasar.svg",
+    "logoDark": "quasar_dark.svg",
+    "url": "https://quasar.dev",
+    "iframeUrl": "https://quasar.dev/vue-components/button",
+    "repoOwner": "quasarframework",
+    "repoName": "quasar",
+    "package": "quasar",
+    "componentCount": 72,
+    "filterMatchings": [
+      {
+        "id": "FMobile"
+      },
+      {
+        "id": "FVue"
+      },
+      {
+        "id": "FRTLSupport"
+      },
+      {
+        "id": "FThemeGenerator"
+      },
+      {
+        "id": "FDarkMode"
+      },
+      {
+        "id": "FStyled"
+      },
+      {
+        "id": "FImported"
+      },
+      {
+        "id": "FComponents"
+      },
+      {
+        "id": "FFree"
+      },
+      {
+        "id": "FRoadmap"
+      },
+      {
+        "id": "FSemanticColors"
+      }
     ],
-    filterMatchings: [
-      { id: "FStyled" },
-      { id: "FImported" },
-      { id: "FComponents" },
-      { id: "FVue" },
-      { id: "FFree" },
-      { id: "FFigma" },
-      { id: "FSemanticColors" },
-      { id: "FForm" },
-    ],
+    "nbStars": 25475,
+    "nbDownloads": 127773
   },
   {
-    name: "Vuestic UI",
-    logo: "vuestic-ui.png",
-    url: "https://ui.vuestic.dev",
-    repoOwner: "epicmaxco",
-    repoName: "vuestic-ui",
-    package: "vuestic-ui",
-    componentMatchings: [
-      "Accordion", // also have a Collapse
-      "Auto Complete", // used as prop in Select
-      "Alert",
-      "Avatar",
-      "Scroll Top", // called BackTop
-      "Badge", // called Badge or Chip
-      "Indicator", // called Badge
-      "Breadcrumb", // called Breadcrumbs
-      "Button",
-      "Select Button", // called ButtonGroup
-      "Toggle Button", // called ButtonToggle
-      "Card",
-      "Carousel",
-      "Checkbox",
-      "Input Chips", // chips prop in select and Chip component
-      "Input Mask", // uses Cleave under the hood
-      // 'ColorInput', // uses native color picker
-      // 'Config', // Scoped props provider
-      // 'Counter', // Number input
-      "Table", // called DataTable or Table
-      "Date Picker", // called 'DateInput'
-      "Calendar", // called 'Datepicker'
-      "Divider", // called 'Divider' or Separator'
-      "Dropdown",
-      "Context Menu", // have an example of Dropdown usage
-      "File Input", // called 'FileInput'
-      // 'Form',
-      // 'Icon',
-      // 'Image',
-      // 'InfiniteScroll',
-      // 'InnerLoading',
-      "Input",
-      // 'Layout', // Used instead of Drawers
-      "Modal",
-      // 'Navbar',
-      "Pagination",
-      // 'Parallax',
-      "Popover", // called Dropdown
-      "Tooltip", // called 'Popover'
-      "Progress", // called ProgressBar and ProgressCircle or InnerLoading
-      "Radio",
-      "Rating",
-      "Select",
-      "Toast",
-      // 'Sidebar', // is it vertical navigation?
-      "Range", // called Slider
-      "Skeleton",
-      "Steps", // called Stepper
-      "Panel Splitter", // called Split
-      "Toggle", // called Switch
-      "Tabs",
-      // 'TimeInput',
-      // 'TimePicker',
-      "Tree", // called TreeView
-      // 'ScrollContainer', // Uses native scroll
-      "Virtual Scroller",
-      "Textarea",
+    "name": "Vuetify",
+    "logo": "vuetify.svg",
+    "url": "https://vuetifyjs.com",
+    "iframeUrl": "https://vuetifyjs.com/en/components/buttons/#usage",
+    "repoOwner": "vuetifyjs",
+    "repoName": "vuetify",
+    "package": "vuetify",
+    "componentCount": 80,
+    "filterMatchings": [
+      {
+        "id": "FMobile"
+      },
+      {
+        "id": "FStyled"
+      },
+      {
+        "id": "FImported"
+      },
+      {
+        "id": "FComponents"
+      },
+      {
+        "id": "FAccessible"
+      },
+      {
+        "id": "FVue"
+      },
+      {
+        "id": "FRoadmap"
+      },
+      {
+        "id": "FFree"
+      },
+      {
+        "id": "FFigma"
+      },
+      {
+        "id": "FDarkMode"
+      },
+      {
+        "id": "FThemeGenerator"
+      },
+      {
+        "id": "FSemanticColors"
+      },
+      {
+        "id": "FBuiltinThemes"
+      },
+      {
+        "id": "FForm"
+      }
     ],
-    filterMatchings: [
-      { id: "FAccessible" },
-      { id: "FComponents" },
-      { id: "FStyled" },
-      // { id: 'FTailwind' }, // Not made with Tailwind, but do not conflict and
-      // have utilities to use Tailwind classes tougher
-      { id: "FFree" },
-      { id: "FSemanticColors" },
-      { id: "FImported" },
-      { id: "FRoadmap" }, // Open dev discussion in Discord + Roadmap in docs
-      { id: "FDarkMode" },
-      { id: "FVue" },
-      { id: "FForm" },
-      { id: "FTyped" },
+    "nbStars": 39281,
+    "nbDownloads": 532932
+  },
+  {
+    "name": "Headless UI",
+    "repoOwner": "tailwindlabs",
+    "repoName": "headlessui",
+    "package": "@headlessui/vue",
+    "logo": "headlessui.svg",
+    "url": "https://headlessui.com/",
+    "iframeUrl": "https://headlessui.com/react/menu",
+    "componentCount": 8,
+    "filterMatchings": [
+      {
+        "id": "FMobile"
+      },
+      {
+        "id": "FUnstyled"
+      },
+      {
+        "id": "FComponents"
+      },
+      {
+        "id": "FImported"
+      },
+      {
+        "id": "FTailwind"
+      },
+      {
+        "id": "FAccessible"
+      },
+      {
+        "id": "FFree"
+      },
+      {
+        "id": "FOfficial"
+      },
+      {
+        "id": "FVue"
+      },
+      {
+        "id": "FReact"
+      }
     ],
+    "nbStars": 24936,
+    "nbDownloads": 267949
+  },
+  {
+    "name": "Tailwind UI",
+    "subName": "on top of Headless UI",
+    "subNameZh": "最流行的 Headless UI 库",
+    "logo": "tailwind.svg",
+    "cantPreview": true,
+    "url": "https://tailwindui.com",
+    "iframeUrl": "https://tailwindui.com/components/application-ui/forms/form-layouts",
+    "componentCount": 40,
+    "filterMatchings": [
+      {
+        "id": "FStyled"
+      },
+      {
+        "id": "FPasted"
+      },
+      {
+        "id": "FComponents"
+      },
+      {
+        "id": "FTailwind"
+      },
+      {
+        "id": "FAccessible"
+      },
+      {
+        "id": "FOfficial"
+      },
+      {
+        "id": "FVue"
+      },
+      {
+        "id": "FReact"
+      }
+    ]
+  },
+  {
+    "name": "HyperUI",
+    "logo": "hyperui.ico",
+    "url": "https://hyperui.dev/",
+    "iframeUrl": "https://www.hyperui.dev/components/application-ui/tables",
+    "componentCount": 47,
+    "repoOwner": "markmead",
+    "repoName": "hyperui",
+    "filterMatchings": [
+      {
+        "id": "FMobile"
+      },
+      {
+        "id": "FAccessible"
+      },
+      {
+        "id": "FStyled"
+      },
+      {
+        "id": "FPasted"
+      },
+      {
+        "id": "FComponents"
+      },
+      {
+        "id": "FTailwind"
+      },
+      {
+        "id": "FVue"
+      },
+      {
+        "id": "FFree"
+      },
+      {
+        "id": "FReact"
+      }
+    ],
+    "nbStars": 8778
+  },
+  {
+    "name": "Naive UI",
+    "logo": "naiveui.svg",
+    "url": "https://www.naiveui.com/",
+    "iframeUrl": "https://www.naiveui.com/zh-CN/os-theme/components/button",
+    "repoOwner": "tusen-ai",
+    "repoName": "naive-ui",
+    "package": "naive-ui",
+    "componentCount": 88,
+    "filterMatchings": [
+      {
+        "id": "FVue"
+      },
+      {
+        "id": "FTyped"
+      },
+      {
+        "id": "FThemeGenerator"
+      },
+      {
+        "id": "FImported"
+      },
+      {
+        "id": "FComponents"
+      },
+      {
+        "id": "FStyled"
+      },
+      {
+        "id": "FFree"
+      },
+      {
+        "id": "FSemanticColors"
+      },
+      {
+        "id": "FForm"
+      }
+    ],
+    "nbStars": 15513,
+    "nbDownloads": 35748
+  },
+  {
+    "name": "Flowbite Vue",
+    "logo": "flowbite-vue.svg",
+    "url": "https://flowbite-vue.com",
+    "iframeUrl": "https://flowbite-vue.com/components/button",
+    "repoOwner": "themesberg",
+    "repoName": "flowbite-vue",
+    "package": "flowbite-vue",
+    "componentCount": 37,
+    "filterMatchings": [
+      {
+        "id": "FMobile"
+      },
+      {
+        "id": "FStyled"
+      },
+      {
+        "id": "FImported"
+      },
+      {
+        "id": "FComponents"
+      },
+      {
+        "id": "FTailwind"
+      },
+      {
+        "id": "FFree"
+      },
+      {
+        "id": "FFigma"
+      },
+      {
+        "id": "FVue"
+      }
+    ],
+    "nbStars": 688,
+    "nbDownloads": 7433
+  },
+  {
+    "name": "Vant",
+    "logo": "vant.png",
+    "url": "https://vant-ui.github.io/vant",
+    "iframeUrl": "https://vant-ui.github.io/vant/#/button",
+    "repoOwner": "youzan",
+    "repoName": "vant",
+    "package": "vant",
+    "componentCount": 81,
+    "filterMatchings": [
+      {
+        "id": "FMobile"
+      },
+      {
+        "id": "FStyled"
+      },
+      {
+        "id": "FImported"
+      },
+      {
+        "id": "FComponents"
+      },
+      {
+        "id": "FFree"
+      },
+      {
+        "id": "FFigma"
+      },
+      {
+        "id": "FAccessible"
+      },
+      {
+        "id": "FSemanticColors"
+      },
+      {
+        "id": "FVue"
+      },
+      {
+        "id": "FForm"
+      },
+      {
+        "id": "FTyped"
+      },
+      {
+        "id": "FDarkMode"
+      }
+    ],
+    "nbStars": 22961,
+    "nbDownloads": 52854
+  },
+  {
+    "name": "Vant Weapp",
+    "logo": "vant.png",
+    "url": "https://vant-ui.github.io/vant-weapp",
+    "iframeUrl": "https://vant-ui.github.io/vant-weapp/#/button",
+    "repoOwner": "youzan",
+    "repoName": "vant-weapp",
+    "package": "@vant/weapp",
+    "componentCount": 54,
+    "filterMatchings": [
+      {
+        "id": "FMiniProgram"
+      },
+      {
+        "id": "FStyled"
+      },
+      {
+        "id": "FImported"
+      },
+      {
+        "id": "FComponents"
+      },
+      {
+        "id": "FFree"
+      },
+      {
+        "id": "FFigma"
+      },
+      {
+        "id": "FSemanticColors"
+      },
+      {
+        "id": "FForm"
+      },
+      {
+        "id": "FTyped"
+      }
+    ],
+    "nbStars": 17574,
+    "nbDownloads": 1906
+  },
+  {
+    "name": "Vuestic UI",
+    "logo": "vuestic-ui.png",
+    "url": "https://ui.vuestic.dev",
+    "iframeUrl": "https://ui.vuestic.dev/ui-elements/button",
+    "repoOwner": "epicmaxco",
+    "repoName": "vuestic-ui",
+    "package": "vuestic-ui",
+    "componentCount": 70,
+    "filterMatchings": [
+      {
+        "id": "FMobile"
+      },
+      {
+        "id": "FAccessible"
+      },
+      {
+        "id": "FComponents"
+      },
+      {
+        "id": "FStyled"
+      },
+      {
+        "id": "FFree"
+      },
+      {
+        "id": "FSemanticColors"
+      },
+      {
+        "id": "FImported"
+      },
+      {
+        "id": "FRoadmap"
+      },
+      {
+        "id": "FDarkMode"
+      },
+      {
+        "id": "FVue"
+      },
+      {
+        "id": "FForm"
+      },
+      {
+        "id": "FTyped"
+      }
+    ],
+    "nbStars": 3349,
+    "nbDownloads": 3059
+  },
+  {
+    "name": "Chakra UI",
+    "logo": "chakra-ui.png",
+    "url": "https://v2.chakra-ui.com/",
+    "iframeUrl": "https://v2.chakra-ui.com/docs/components/button/usage",
+    "repoOwner": "chakra-ui",
+    "repoName": "chakra-ui",
+    "package": "@chakra-ui/react",
+    "componentCount": 62,
+    "filterMatchings": [
+      {
+        "id": "FReact"
+      },
+      {
+        "id": "FTailwind"
+      },
+      {
+        "id": "FImported"
+      },
+      {
+        "id": "FMobile"
+      },
+      {
+        "id": "FAccessible"
+      },
+      {
+        "id": "FComponents"
+      },
+      {
+        "id": "FStyled"
+      },
+      {
+        "id": "FFree"
+      },
+      {
+        "id": "FSemanticColors"
+      },
+      {
+        "id": "FThemeGenerator"
+      },
+      {
+        "id": "FRoadmap"
+      },
+      {
+        "id": "FDarkMode"
+      },
+      {
+        "id": "FForm"
+      },
+      {
+        "id": "FFigma"
+      },
+      {
+        "id": "FTyped"
+      }
+    ],
+    "nbStars": 36983,
+    "nbDownloads": 546468
+  },
+  {
+    "name": "Aceternity UI",
+    "logo": "aceternity-ui.png",
+    "url": "https://ui.aceternity.com/",
+    "iframeUrl": "https://ui.aceternity.com/components/3d-pin",
+    "componentCount": 53,
+    "filterMatchings": [
+      {
+        "id": "FReact"
+      },
+      {
+        "id": "FMobile"
+      },
+      {
+        "id": "FTailwind"
+      },
+      {
+        "id": "FStyled"
+      },
+      {
+        "id": "FFree"
+      },
+      {
+        "id": "FPasted"
+      },
+      {
+        "id": "FAccessible"
+      },
+      {
+        "id": "FSemanticColors"
+      },
+      {
+        "id": "FDarkMode"
+      }
+    ],
+    "nbStars": 3347,
+    "nbDownloads": 3071
+  },
+  {
+    "name": "Wired Elements",
+    "logo": "wired-elements.png",
+    "url": "https://wiredjs.com/",
+    "iframeUrl": "https://wiredjs.com/showcase",
+    "repoOwner": "rough-stuff",
+    "repoName": "wired-elements",
+    "package": "wired-elements",
+    "componentCount": 22,
+    "filterMatchings": [
+      {
+        "id": "FReact"
+      },
+      {
+        "id": "FVue"
+      },
+      {
+        "id": "FMobile"
+      },
+      {
+        "id": "FStyled"
+      },
+      {
+        "id": "FImported"
+      },
+      {
+        "id": "FComponents"
+      },
+      {
+        "id": "FFree"
+      },
+      {
+        "id": "FAccessible"
+      },
+      {
+        "id": "FTyped"
+      }
+    ],
+    "nbStars": 10408,
+    "nbDownloads": 5513
+  },
+  {
+    "name": "PrimeReact",
+    "logo": "primereact.ico",
+    "url": "https://primereact.org/",
+    "iframeUrl": "https://primereact.org/button/",
+    "repoOwner": "primefaces",
+    "repoName": "primereact",
+    "package": "primereact",
+    "componentCount": 94,
+    "filterMatchings": [
+      {
+        "id": "FMobile"
+      },
+      {
+        "id": "FStyled"
+      },
+      {
+        "id": "FUnstyled"
+      },
+      {
+        "id": "FImported"
+      },
+      {
+        "id": "FTailwind"
+      },
+      {
+        "id": "FComponents"
+      },
+      {
+        "id": "FReact"
+      },
+      {
+        "id": "FFree"
+      },
+      {
+        "id": "FAccessible"
+      },
+      {
+        "id": "FBuiltinThemes"
+      },
+      {
+        "id": "FThemeGenerator"
+      },
+      {
+        "id": "FDarkMode"
+      },
+      {
+        "id": "FFigma"
+      },
+      {
+        "id": "FSemanticColors"
+      },
+      {
+        "id": "FRoadmap"
+      },
+      {
+        "id": "FRTLSupport"
+      },
+      {
+        "id": "FForm"
+      },
+      {
+        "id": "FTyped"
+      }
+    ],
+    "nbStars": 6117,
+    "nbDownloads": 138923
+  },
+  {
+    "name": "Evergreen",
+    "logo": "evergreen.png",
+    "url": "https://evergreen.segment.com",
+    "iframeUrl": "https://evergreen.segment.com/components/buttons",
+    "repoOwner": "segmentio",
+    "repoName": "evergreen",
+    "package": "evergreen-ui",
+    "componentCount": 38,
+    "filterMatchings": [
+      {
+        "id": "FMobile"
+      },
+      {
+        "id": "FStyled"
+      },
+      {
+        "id": "FImported"
+      },
+      {
+        "id": "FComponents"
+      },
+      {
+        "id": "FReact"
+      },
+      {
+        "id": "FFree"
+      },
+      {
+        "id": "FAccessible"
+      },
+      {
+        "id": "FSemanticColors"
+      }
+    ],
+    "nbStars": 12352,
+    "nbDownloads": 10258
+  },
+  {
+    "name": "Fluent UI",
+    "logo": "fluent-ui.ico",
+    "url": "https://react.fluentui.dev/",
+    "iframeUrl": "https://react.fluentui.dev/?path=/docs/components-button-button--default",
+    "repoOwner": "microsoft",
+    "repoName": "fluentui",
+    "package": "@fluentui/react",
+    "componentCount": 63,
+    "filterMatchings": [
+      {
+        "id": "FMobile"
+      },
+      {
+        "id": "FStyled"
+      },
+      {
+        "id": "FImported"
+      },
+      {
+        "id": "FComponents"
+      },
+      {
+        "id": "FReact"
+      },
+      {
+        "id": "FFree"
+      },
+      {
+        "id": "FAccessible"
+      },
+      {
+        "id": "FBuiltinThemes"
+      },
+      {
+        "id": "FDarkMode"
+      },
+      {
+        "id": "FSemanticColors"
+      },
+      {
+        "id": "FFigma"
+      },
+      {
+        "id": "FRoadmap"
+      },
+      {
+        "id": "FRTLSupport"
+      }
+    ],
+    "nbStars": 17975,
+    "nbDownloads": 171266
   },
 ]
+
+
+export const getLibraries = (lang: string) => {
+  const _lang = lang === "en" ? "" : upperFirst(lang)
+
+  return libraries.map((item) => {
+    return {
+      name: item.name,
+      // @ts-ignore
+      subName: item[`subName${_lang}`],
+      logo: item.logo,
+      url: addUtmParams(item.url),
+      cantPreview: item.cantPreview,
+      iframeUrl: addUtmParams(item.iframeUrl),
+      detailUrl: `/c/${item.name.toLowerCase().replace(/\s/g, "-")}`,
+      showUrl: item.showUrl || item.url,
+      repoOwner: item.repoOwner,
+      repoName: item.repoName,
+      package: item.package,
+      componentCount: item.componentCount,
+      filterMatchings: item.filterMatchings,
+      nbStars: item.nbStars,
+      nbDownloads: item.nbDownloads,
+    }
+  })
+}

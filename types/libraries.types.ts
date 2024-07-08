@@ -1,5 +1,5 @@
 import { ButtonFilterMatching } from "@/types/filters.types"
-import { ComponentName } from "@/types/components.types"
+// import { ComponentName } from "@/types/components.types"
 
 export type Library = {
   name: string
@@ -11,7 +11,8 @@ export type Library = {
   repoName?: string
   package?: string
   filterMatchings: ButtonFilterMatching[]
-  componentMatchings: ComponentName[]
+  componentCount: number
+  // componentMatchings: ComponentName[]
   nbStars?: number // filled later
   nbDownloads?: number // filled later
 }

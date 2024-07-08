@@ -14,18 +14,21 @@
     <div class="mb-5" v-for="section in sections" :key="section.name">
       <div class="mb-3 flex items-center gap-2.5">
         <UIcon :name="section.icon" class="h-5 w-5" />
-        <h3 class="font-semibold">{{ section.name }}</h3>
+        <h3 class="font-semibold">{{ section.name + (section.nameZh ? ` ${section.nameZh}` : '' )  }}</h3>
       </div>
       <div class="flex flex-wrap gap-0 space-y-1">
         <template v-for="component in section.components" :key="component.name">
           <UTooltip
             v-if="showMissing || (!showMissing && isFound(component))"
-            class="flex w-[150px] cursor-default items-center gap-1.5"
+            class="flex w-[200px] cursor-default items-center gap-1.5"
           >
             <template #text>
               {{ component.help }}
-              <div v-if="component.aliases" class="mt-2 italic">
+              <div v-if="component.aliases && currentLocale !== 'zh'" class="mt-2 italic">
                 Aliases: {{ component.aliases.join(", ") }}
+              </div>
+              <div v-if="component.aliases && currentLocale === 'zh'" class="mt-2 italic">
+                别名: {{ component.aliases.map((item, index)=> `${item} ${component.aliasesZh[index]}` ).join(", ") }}
               </div>
             </template>
             <UIcon
@@ -40,7 +43,7 @@
               class="text-sm"
               :class="isFound(component) ? 'primary-text' : 'primary-text-muted'"
             >
-              {{ component.name }}
+              {{ component.name  + (component.nameZh ? ` ${component.nameZh}` : '' ) }}
             </span>
           </UTooltip>
         </template>
@@ -60,14 +63,17 @@
 </template>
 
 <script setup lang="ts">
-import { sections } from "@/data/sections"
+import { getSections } from "@/data/sections"
 import type { Library } from "@/types/libraries.types"
 import type { Component } from "@/types/components.types"
 
+const { locale } = useI18n()
+const currentLocale = locale.value
+const sections = getSections(locale.value)
 const props = defineProps<{ library: Library }>()
 
-const isFound = (component: Component): boolean =>
-  props.library.componentMatchings.includes(component.name)
-
+// const isFound = (component: Component): boolean =>
+//   props.library.componentMatchings.includes(component.name)
+const isFound = (component: Component): boolean => false
 const { showMissing } = useShowMissingStore()
 </script>

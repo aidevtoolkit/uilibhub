@@ -1,3 +1,5 @@
+import { sections as sectionsZh } from "./sections-zh"
+
 export const sections = [
   {
     name: "Elements" as const,
@@ -291,3 +293,7 @@ export const sections = [
     ],
   },
 ]
+
+export const getSections = (lang: string) => {
+  return lang === "zh" ? sectionsZh : sections
+}

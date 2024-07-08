@@ -26,10 +26,12 @@
 </template>
 
 <script setup lang="ts">
-import { rangeFilters } from "@/data/filters"
+import { getRangeFilters } from "@/data/filters"
 import type { RangeFilter, RangeFilterID } from "@/types/filters.types"
 
 const props = defineProps<{ rangeFilterID: RangeFilterID }>()
+const { locale } = useI18n()
+const rangeFilters = getRangeFilters(locale.value)
 const rangeFilter = findBy<RangeFilter>("id", props.rangeFilterID, rangeFilters)!
 const { rangeFiltering, changeRangeFiltering } = useFilterStore()
 </script>

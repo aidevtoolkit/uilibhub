@@ -72,3 +72,9 @@
     @apply decoration-primary-500 dark:decoration-primary-400 underline underline-offset-8;
   }
 }
+
+.a-hover-primary {
+  a {
+    @apply hover:primary-text;
+  }
+}

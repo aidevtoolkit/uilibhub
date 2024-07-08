@@ -1,20 +1,20 @@
 <template>
   <div
-    v-if="display"
     class="min-h-[180px] w-auto rounded-lg border border-gray-200 bg-white px-3 py-2 dark:border-gray-800 dark:bg-gray-700"
   >
     <div class="flex h-full flex-col justify-between">
       <div class="flex items-start justify-between gap-8 px-4 py-2">
-        <div class="shrink-0">
-          <UTooltip :text="`Go to ${library.name} website`">
+        <div class="shrink">
+          <UTooltip :text="$t('viewDetail', { name: library.name })">
             <UButton
               class="flex flex-col gap-3"
               variant="ghost"
               :padded="false"
               color="black"
               size="xl"
-              :to="library.url"
-              target="_blank"
+              rel="nofollow"
+              :title="library.name"
+              :to="localePath(library.detailUrl)"
             >
               <div class="w-full">
                 <img :src="`/img/${logo}`" :alt="logo" class="h-12 w-12 drop-shadow-lg" />
@@ -22,7 +22,7 @@
               <p class="font-medium tracking-wide">{{ library.name }}</p>
             </UButton>
           </UTooltip>
-          <p v-if="library.subName" class="-mt-1 text-xs">({{ library.subName }})</p>
+          <p v-if="library.subName" class="-mt-1 text-xs">（{{ library.subName }}）</p>
         </div>
 
         <div class="flex flex-wrap place-content-end gap-2">
@@ -34,48 +34,51 @@
       <!-- Card footer -->
       <div class="mt-4 flex items-center justify-between">
         <div class="ml-1 flex">
-          <UTooltip v-if="repoUrl && library.nbStars" text="Go to github.com page">
+          <UTooltip v-if="repoUrl && library.nbStars"
+                    :text="$t('goTo', { name: 'github.com' })">
             <UButton
               icon="i-mdi-star-outline"
               :label="getDisplayableNumber(library.nbStars)"
               :to="repoUrl"
               target="_blank"
+              rel="nofollow"
               variant="ghost"
               color="gray"
             />
           </UTooltip>
-          <UTooltip v-if="registryUrl && library.nbDownloads" text="Go to npmjs.com page">
+          <UTooltip v-if="registryUrl && library.nbDownloads"
+                    :text="$t('goTo', { name: 'npmjs.com' })">
             <UButton
               icon="i-material-symbols-download"
               :label="getDisplayableNumber(library.nbDownloads)"
               :to="registryUrl"
+              rel="nofollow"
               target="_blank"
+              variant="ghost"
+              color="gray"
+            />
+          </UTooltip>
+           <UTooltip :text="$t('officialWebsite')">
+            <UButton
+              icon="i-akar-icons-link-out"
+              :to="library.url"
+              target="_blank"
+              rel="nofollow"
               variant="ghost"
               color="gray"
             />
           </UTooltip>
         </div>
         <div class="mr-2">
-          <UTooltip text="Browse all available components">
-            <UButton
+          <UButton
+              class="pointer-events-none"
               @click="isComponentPanelOpen = true"
               icon="i-heroicons-square-3-stack-3d"
               size="xl"
-              :label="`${nbComponents} components`"
+              :label="`${nbComponents} ${$t('componentCount')}`"
               variant="ghost"
               color="primary"
             />
-            <USlideover
-              @dblclick.prevent=""
-              v-model="isComponentPanelOpen"
-              side="right"
-              :ui="{ width: 'max-w-[85%] md:max-w-2xl' }"
-            >
-              <SlideoverContent>
-                <LibraryCardComponentPanel :library="library" />
-              </SlideoverContent>
-            </USlideover>
-          </UTooltip>
         </div>
       </div>
     </div>
@@ -83,7 +86,7 @@
 </template>
 
 <script setup lang="ts">
-import { buttonFilters } from "@/data/filters"
+import { getButtonFilters } from "@/data/filters"
 import type { Library } from "@/types/libraries.types"
 import type { ButtonFilter } from "@/types/filters.types"
 
@@ -95,7 +98,11 @@ const props = defineProps<{
 const library = ref(props.initialLibrary)
 const isComponentPanelOpen = ref(false)
 const colorMode = useColorMode()
-const nbComponents = library.value.componentMatchings.length
+const nbComponents = library.value.componentCount
+const localePath = useLocalePath()
+
+const { locale } = useI18n()
+const buttonFilters = getButtonFilters(locale.value)
 
 const buttonFiltersToShow = computed((): ButtonFilter[] => {
   /* Return the button filters (ordered by indexes, to keep consistency over the different cards) than must be showed on the card */
@@ -159,18 +166,18 @@ type GithubApiResponse = {
   [key: string]: unknown // unknown and useless keys
 }
 
-if (repoUrl) {
-  const { data: githubApiData } = useFetch<GithubApiResponse>(
-    `https://api.github.com/repos/${library.value.repoOwner}/${library.value.repoName}`,
-    {
-      lazy: true,
-      server: false, // This call will only be performed on the client
-      onResponse({ response }) {
-        library.value.nbStars = response._data.stargazers_count
-      },
-    }
-  )
-}
+// if (repoUrl) {
+//   const { data: githubApiData } = useFetch<GithubApiResponse>(
+//     `https://api.github.com/repos/${library.value.repoOwner}/${library.value.repoName}`,
+//     {
+//       lazy: true,
+//       server: false, // This call will only be performed on the client
+//       onResponse({ response }) {
+//         library.value.nbStars = response._data.stargazers_count
+//       },
+//     }
+//   )
+// }
 
 // NPM related ---------------------------------------------------------------------------
 
@@ -184,16 +191,16 @@ type NpmApiResponse = {
   [key: string]: unknown
 }
 
-if (registryUrl) {
-  const { data: npmApiData } = useFetch<NpmApiResponse>(
-    `https://api.npmjs.org/downloads/point/last-week/${library.value.package}`,
-    {
-      lazy: true,
-      server: false,
-      onResponse({ response }) {
-        library.value.nbDownloads = response._data.downloads
-      },
-    }
-  )
-}
+// if (registryUrl) {
+//   const { data: npmApiData } = useFetch<NpmApiResponse>(
+//     `https://api.npmjs.org/downloads/point/last-week/${library.value.package}`,
+//     {
+//       lazy: true,
+//       server: false,
+//       onResponse({ response }) {
+//         library.value.nbDownloads = response._data.downloads
+//       },
+//     }
+//   )
+// }
 </script>
