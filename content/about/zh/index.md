@@ -5,7 +5,7 @@ title: 关于我们
 ![UILibHub](/img/banner.jpg)
 
 ## 什么是 UILibHub？
-UILibHub 是一个专注于收集和分享 React、Vue 和小程序组件库的资源平台。我们提供最新、最全面的组件库推荐，旨在帮助开发者高效构建现代化应用。本网站基于 David Dahan 的开源项目 [UI Libs](https://github.com/ddahan/ui-libs) 开发，并进行了以下主要改造：
+UILibHub 专注收集和分享 React、Vue 和小程序组件库的优质资源。UILibHub 提供最新、最全面的组件库推荐，助力开发者高效构建现代化应用。网站基于 David Dahan 的开源项目 [UI Libs](https://github.com/ddahan/ui-libs) 开发，特此致谢。主要对 UI Libs 进行如下改造：
 
 ### 功能增强
 1. **扩展库收录范围**：新增 React、移动端、小程序相关 UI 库，目前共收录 **30+** 优质 UI 库。
