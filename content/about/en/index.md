@@ -1,8 +1,8 @@
-# UILibHub
+---
+title: About Us
+---
 
-![UILibHub](./docs/banner.jpg)
-
-English | [中文](./README-zh.md)
+![UILibHub](/img/banner.jpg)
 
 ## What is UILibHub?
 UILibHub is dedicated to collecting and sharing high-quality resources for React, Vue, and Mini Program component libraries. We provide the most up-to-date and comprehensive recommendations for component libraries, empowering developers to efficiently build modern applications. The website is developed based on David Dahan's open-source project [UI Libs](https://github.com/ddahan/ui-libs), to whom we extend our gratitude. We've made the following key modifications to UI Libs:

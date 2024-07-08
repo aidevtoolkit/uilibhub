@@ -1,0 +1,1494 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+<div>111</div>
+<script>
+const libraries = [
+  {
+    "name": "Material UI",
+    "logo": "mui.png",
+    "url": "https://mui.com/material-ui/",
+    "repoOwner": "mui",
+    "repoName": "material-ui",
+    "package": "@mui/material",
+    "componentCount": 59,
+    "filterMatchings": [
+      {
+        "id": "FMobile",
+      },
+      {
+        "id": "FStyled",
+      },
+      {
+        "id": "FImported",
+      },
+      {
+        "id": "FComponents",
+      },
+      {
+        "id": "FReact",
+      },
+      {
+        "id": "FFree",
+      },
+      {
+        "id": "FAccessible",
+      },
+      {
+        "id": "FBuiltinThemes",
+      },
+      {
+        "id": "FThemeGenerator",
+      },
+      {
+        "id": "FDarkMode",
+      },
+      {
+        "id": "FSemanticColors",
+      },
+      {
+        "id": "FFigma",
+      },
+      {
+        "id": "FSemanticColors",
+      },
+      {
+        "id": "FRoadmap",
+      },
+      {
+        "id": "FRTLSupport",
+      },
+      {
+        "id": "FForm",
+      },
+      {
+        "id": "FTyped",
+      },
+    ],
+    "nbStars": 90823,
+    "nbDownloads": 1391041,
+  },
+  {
+    "name": "Evergreen",
+    "logo": "evergreen.png",
+    "url": "https://evergreen.segment.com",
+    "repoOwner": "segmentio",
+    "repoName": "evergreen",
+    "package": "evergreen-ui",
+    "componentCount": 38,
+    "filterMatchings": [
+      {
+        "id": "FMobile",
+      },
+      {
+        "id": "FStyled",
+      },
+      {
+        "id": "FImported",
+      },
+      {
+        "id": "FComponents",
+      },
+      {
+        "id": "FReact",
+      },
+      {
+        "id": "FFree",
+      },
+      {
+        "id": "FAccessible",
+      },
+      {
+        "id": "FSemanticColors",
+      },
+    ],
+    "nbStars": 90823,
+    "nbDownloads": 1391041,
+  },
+  {
+    "name": "Fluent UI",
+    "logo": "fluent-ui.ico",
+    "url": "https://react.fluentui.dev/",
+    "repoOwner": "microsoft",
+    "repoName": "fluentui",
+    "package": "@fluentui/react",
+    "componentCount": 63,
+    "filterMatchings": [
+      {
+        "id": "FMobile",
+      },
+      {
+        "id": "FStyled",
+      },
+      {
+        "id": "FImported",
+      },
+      {
+        "id": "FComponents",
+      },
+      {
+        "id": "FReact",
+      },
+      {
+        "id": "FFree",
+      },
+      {
+        "id": "FAccessible",
+      },
+      {
+        "id": "FBuiltinThemes",
+      },
+      {
+        "id": "FDarkMode",
+      },
+      {
+        "id": "FSemanticColors",
+      },
+      {
+        "id": "FFigma",
+      },
+      {
+        "id": "FRoadmap",
+      },
+      {
+        "id": "FRTLSupport",
+      },
+    ],
+    "nbStars": 90823,
+    "nbDownloads": 1391041,
+  },
+  {
+    "name": "Tailspark",
+    "logo": "favicon.ico",
+    "url": "https://tailspark.co",
+    "componentCount": 350,
+    "filterMatchings": [
+      {
+        "id": "FMobile",
+      },
+      {
+        "id": "FStyled",
+      },
+      {
+        "id": "FReact",
+      },
+      {
+        "id": "FVue",
+      },
+      {
+        "id": "FTailwind",
+      },
+      {
+        "id": "FPasted",
+      },
+      {
+        "id": "FDarkMode",
+      },
+      {
+        "id": "FFigma",
+      },
+    ],
+  },
+  {
+    "name": "TailwindFlex",
+    "logo": "tailwind-flex.svg",
+    "url": "https://tailwindflex.com/",
+    "componentCount": 1400,
+    "filterMatchings": [
+      {
+        "id": "FMobile",
+      },
+      {
+        "id": "FTailwind",
+      },
+      {
+        "id": "FStyled",
+      },
+      {
+        "id": "FReact",
+      },
+      {
+        "id": "FFree",
+      },
+    ],
+    "nbStars": 90823,
+    "nbDownloads": 1391041,
+  },
+  {
+    "name": "Ant Design",
+    "logo": "ant-design.png",
+    "url": "https://ant.design/",
+    "repoOwner": "ant-design",
+    "repoName": "ant-design",
+    "package": "antd",
+    "componentCount": 68,
+    "filterMatchings": [
+      {
+        "id": "FStyled",
+      },
+      {
+        "id": "FImported",
+      },
+      {
+        "id": "FComponents",
+      },
+      {
+        "id": "FReact",
+      },
+      {
+        "id": "FFree",
+      },
+      {
+        "id": "FFigma",
+      },
+      {
+        "id": "FSemanticColors",
+      },
+      {
+        "id": "FForm",
+      },
+    ],
+    "nbStars": 90823,
+    "nbDownloads": 1391041,
+  },
+  {
+    "name": "Ant Design Vue",
+    "logo": "antvue.svg",
+    "url": "https://antdv.com",
+    "repoOwner": "vueComponent",
+    "repoName": "ant-design-vue",
+    "package": "ant-design-vue",
+    "componentCount": 68,
+    "filterMatchings": [
+      {
+        "id": "FStyled",
+      },
+      {
+        "id": "FImported",
+      },
+      {
+        "id": "FComponents",
+      },
+      {
+        "id": "FVue",
+      },
+      {
+        "id": "FFree",
+      },
+      {
+        "id": "FFigma",
+      },
+      {
+        "id": "FSemanticColors",
+      },
+      {
+        "id": "FForm",
+      },
+    ],
+    "nbStars": 19791,
+    "nbDownloads": 108812,
+  },
+  {
+    "name": "Daisy UI",
+    "repoOwner": "saadeghi",
+    "repoName": "daisyui",
+    "package": "daisyui",
+    "logo": "daisyui.svg",
+    "url": "https://daisyui.com/?aff=qjOrK",
+    "componentCount": 56,
+    "filterMatchings": [
+      {
+        "id": "FMobile",
+      },
+      {
+        "id": "FStyled",
+      },
+      {
+        "id": "FImported",
+      },
+      {
+        "id": "FCSS",
+      },
+      {
+        "id": "FTailwind",
+      },
+      {
+        "id": "FFree",
+      },
+      {
+        "id": "FBuiltinThemes",
+      },
+      {
+        "id": "FThemeGenerator",
+      },
+      {
+        "id": "FSemanticColors",
+      },
+      {
+        "id": "FDarkMode",
+      },
+      {
+        "id": "FVue",
+      },
+      {
+        "id": "FReact",
+      },
+      {
+        "id": "FRTLSupport",
+      },
+    ],
+    "nbStars": 31796,
+    "nbDownloads": 253260,
+  },
+  {
+    "name": "Element Plus",
+    "logo": "element-plus.svg",
+    "url": "https://element-plus.org",
+    "repoOwner": "element-plus",
+    "repoName": "element-plus",
+    "package": "element-plus",
+    "componentCount": 76,
+    "filterMatchings": [
+      {
+        "id": "FStyled",
+      },
+      {
+        "id": "FVue",
+      },
+      {
+        "id": "FTyped",
+      },
+      {
+        "id": "FDarkMode",
+      },
+      {
+        "id": "FRoadmap",
+      },
+      {
+        "id": "FImported",
+      },
+      {
+        "id": "FComponents",
+      },
+      {
+        "id": "FFree",
+      },
+      {
+        "id": "FFigma",
+      },
+      {
+        "id": "FSemanticColors",
+      },
+      {
+        "id": "FForm",
+      },
+    ],
+    "nbStars": 23595,
+    "nbDownloads": 226313,
+  },
+  {
+    "name": "Next UI",
+    "logo": "nextui.png",
+    "url": "https://nextui.org/",
+    "repoOwner": "nextui-org",
+    "repoName": "nextui",
+    "package": "@nextui-org/react",
+    "componentCount": 55,
+    "filterMatchings": [
+      {
+        "id": "FMobile",
+      },
+      {
+        "id": "FStyled",
+      },
+      {
+        "id": "FImported",
+      },
+      {
+        "id": "FTailwind",
+      },
+      {
+        "id": "FComponents",
+      },
+      {
+        "id": "FFree",
+      },
+      {
+        "id": "FAccessible",
+      },
+      {
+        "id": "FSemanticColors",
+      },
+      {
+        "id": "FDarkMode",
+      },
+      {
+        "id": "FRoadmap",
+      },
+      {
+        "id": "FThemeGenerator",
+      },
+      {
+        "id": "FRTLSupport",
+      },
+      {
+        "id": "FTyped",
+      },
+      {
+        "id": "FReact",
+      },
+    ],
+    "nbStars": 20238,
+    "nbDownloads": 112519,
+  },
+  {
+    "name": "Nuxt UI",
+    "logo": "nuxt.svg",
+    "url": "https://ui.nuxt.com",
+    "repoOwner": "nuxtlabs",
+    "repoName": "ui",
+    "package": "@nuxt/ui",
+    "componentCount": 55,
+    "filterMatchings": [
+      {
+        "id": "FMobile",
+      },
+      {
+        "id": "FStyled",
+      },
+      {
+        "id": "FImported",
+      },
+      {
+        "id": "FTailwind",
+      },
+      {
+        "id": "FComponents",
+      },
+      {
+        "id": "FFree",
+      },
+      {
+        "id": "FAccessible",
+      },
+      {
+        "id": "FSemanticColors",
+      },
+      {
+        "id": "FDarkMode",
+      },
+      {
+        "id": "FOfficial",
+      },
+      {
+        "id": "FRoadmap",
+      },
+      {
+        "id": "FRTLSupport",
+      },
+      {
+        "id": "FTyped",
+      },
+      {
+        "id": "FVue",
+      },
+      {
+        "id": "FForm",
+      },
+      {
+        "id": "FFigma",
+      },
+    ],
+    "nbStars": 3518,
+    "nbDownloads": 37223,
+  },
+  {
+    "name": "Radix",
+    "logo": "radix.svg",
+    "url": "https://www.radix-vue.com/",
+    "repoOwner": "radix-ui",
+    "repoName": "primitives",
+    // package: "@radix-ui/primitives",
+    "componentCount": 28,
+    "filterMatchings": [
+      {
+        "id": "FMobile",
+      },
+      {
+        "id": "FReact",
+      },
+      {
+        "id": "FUnstyled",
+      },
+      {
+        "id": "FImported",
+      },
+      {
+        "id": "FComponents",
+      },
+      {
+        "id": "FFree",
+      },
+      {
+        "id": "FAccessible",
+      },
+      {
+        "id": "FTyped",
+      },
+    ],
+    "nbStars": 14761,
+    "nbDownloads": 6728856,
+  },
+  {
+    "name": "Radix Vue",
+    "logo": "radixvue.svg",
+    "url": "https://www.radix-vue.com/",
+    "repoOwner": "radix-vue",
+    "repoName": "radix-vue",
+    "package": "radix-vue",
+    "componentCount": 41,
+    "filterMatchings": [
+      {
+        "id": "FMobile",
+      },
+      {
+        "id": "FVue",
+      },
+      {
+        "id": "FUnstyled",
+      },
+      {
+        "id": "FImported",
+      },
+      {
+        "id": "FComponents",
+      },
+      {
+        "id": "FFree",
+      },
+      {
+        "id": "FAccessible",
+      },
+      {
+        "id": "FTyped",
+      },
+      {
+        "id": "FRoadmap",
+      },
+    ],
+    "nbStars": 2839,
+    "nbDownloads": 62877,
+  },
+  {
+    "name": "Shadcn",
+    "subName": "on top of Radix",
+    "subNameZh": "基于 Radix 开发的 UI 库中最流行",
+    "logo": "shadcn-ui.png",
+    "url": "https://ui.shadcn.com/",
+    "repoOwner": "shadcn-ui",
+    "repoName": "ui",
+    "package": "shadcn-ui",
+    "componentCount": 48,
+    "filterMatchings": [
+      {
+        "id": "FMobile",
+      },
+      {
+        "id": "FStyled",
+      },
+      {
+        "id": "FPasted",
+      },
+      {
+        "id": "FTailwind",
+      },
+      {
+        "id": "FComponents",
+      },
+      {
+        "id": "FReact",
+      },
+      {
+        "id": "FThemeGenerator",
+      },
+      {
+        "id": "FDarkMode",
+      },
+      {
+        "id": "FFigma",
+      },
+      {
+        "id": "FFree",
+      },
+      {
+        "id": "FAccessible",
+      },
+    ],
+    "nbStars": 61454,
+    "nbDownloads": 63888,
+  },
+  {
+    "name": "Shadcn-vue",
+    "subName": "on top of Radix Vue",
+    "subNameZh": "基于 Radix Vue 开发的 UI 库中最流行",
+    "logo": "shadcn.png",
+    "url": "https://www.shadcn-vue.com",
+    "repoOwner": "radix-vue",
+    "repoName": "shadcn-vue",
+    "package": "shadcn-vue",
+    "componentCount": 53,
+    "filterMatchings": [
+      {
+        "id": "FMobile",
+      },
+      {
+        "id": "FStyled",
+      },
+      {
+        "id": "FPasted",
+      },
+      {
+        "id": "FTailwind",
+      },
+      {
+        "id": "FComponents",
+      },
+      {
+        "id": "FVue",
+      },
+      {
+        "id": "FThemeGenerator",
+      },
+      {
+        "id": "FDarkMode",
+      },
+      {
+        "id": "FFigma",
+      },
+      {
+        "id": "FFree",
+      },
+      {
+        "id": "FAccessible",
+      },
+    ],
+    "nbStars": 3420,
+    "nbDownloads": 3015,
+  },
+  {
+    "name": "PrimeVue",
+    "logo": "primevue.svg",
+    "url": "https://primevue.org",
+    "repoOwner": "primefaces",
+    "repoName": "primevue",
+    "package": "primevue",
+    "componentCount": 88,
+    "filterMatchings": [
+      {
+        "id": "FMobile",
+      },
+      {
+        "id": "FStyled",
+      },
+      {
+        "id": "FUnstyled",
+      },
+      {
+        "id": "FImported",
+      },
+      {
+        "id": "FTailwind",
+      },
+      {
+        "id": "FComponents",
+      },
+      {
+        "id": "FAccessible",
+      },
+      {
+        "id": "FFigma",
+      },
+      {
+        "id": "FFree",
+      },
+      {
+        "id": "FRoadmap",
+      },
+      {
+        "id": "FThemeGenerator",
+      },
+      {
+        "id": "FBuiltinThemes",
+      },
+      {
+        "id": "FSemanticColors",
+      },
+      {
+        "id": "FVue",
+      },
+      {
+        "id": "FTyped",
+      },
+      {
+        "id": "FForm",
+      },
+      {
+        "id": "FDarkMode",
+      },
+    ],
+    "nbStars": 8520,
+    "nbDownloads": 216118,
+  },
+  {
+    "name": "Quasar",
+    "logo": "quasar.svg",
+    "logoDark": "quasar_dark.svg",
+    "url": "https://quasar.dev",
+    "repoOwner": "quasarframework",
+    "repoName": "quasar",
+    "package": "quasar",
+    "componentCount": 72,
+    "filterMatchings": [
+      {
+        "id": "FMobile",
+      },
+      {
+        "id": "FVue",
+      },
+      {
+        "id": "FRTLSupport",
+      },
+      {
+        "id": "FThemeGenerator",
+      },
+      {
+        "id": "FDarkMode",
+      },
+      {
+        "id": "FStyled",
+      },
+      {
+        "id": "FImported",
+      },
+      {
+        "id": "FComponents",
+      },
+      {
+        "id": "FFree",
+      },
+      {
+        "id": "FRoadmap",
+      },
+      {
+        "id": "FSemanticColors",
+      },
+    ],
+    "nbStars": 25462,
+    "nbDownloads": 125812,
+  },
+  {
+    "name": "Vuetify",
+    "logo": "vuetify.svg",
+    "url": "https://vuetifyjs.com",
+    "repoOwner": "vuetifyjs",
+    "repoName": "vuetify",
+    "package": "vuetify",
+    "componentCount": 80,
+    "filterMatchings": [
+      {
+        "id": "FMobile",
+      },
+      {
+        "id": "FStyled",
+      },
+      {
+        "id": "FImported",
+      },
+      {
+        "id": "FComponents",
+      },
+      {
+        "id": "FAccessible",
+      },
+      {
+        "id": "FVue",
+      },
+      {
+        "id": "FRoadmap",
+      },
+      {
+        "id": "FFree",
+      },
+      {
+        "id": "FFigma",
+      },
+      {
+        "id": "FDarkMode",
+      },
+      {
+        "id": "FThemeGenerator",
+      },
+      {
+        "id": "FSemanticColors",
+      },
+      {
+        "id": "FBuiltinThemes",
+      },
+      {
+        "id": "FForm",
+      },
+    ],
+    "nbStars": 39267,
+    "nbDownloads": 534792,
+  },
+  {
+    "name": "Headless UI",
+    "repoOwner": "tailwindlabs",
+    "repoName": "headlessui",
+    "package": "@headlessui/vue",
+    "logo": "headlessui.svg",
+    "url": "https://headlessui.com/",
+    "componentCount": 8,
+    "filterMatchings": [
+      {
+        "id": "FMobile",
+      },
+      {
+        "id": "FUnstyled",
+      },
+      {
+        "id": "FComponents",
+      },
+      {
+        "id": "FImported",
+      },
+      {
+        "id": "FTailwind",
+      },
+      {
+        "id": "FAccessible",
+      },
+      {
+        "id": "FFree",
+      },
+      {
+        "id": "FOfficial",
+      },
+      {
+        "id": "FVue",
+      },
+      {
+        "id": "FReact",
+      },
+    ],
+    "nbStars": 24915,
+    "nbDownloads": 266427,
+  },
+  {
+    "name": "Tailwind UI",
+    "subName": "on top of Headless UI",
+    "subNameZh": "最流行的 Headless UI 库",
+    "logo": "tailwind.svg",
+    "url": "https://tailwindui.com",
+    "componentCount": 40,
+    "filterMatchings": [
+      {
+        "id": "FStyled",
+      },
+      {
+        "id": "FPasted",
+      },
+      {
+        "id": "FComponents",
+      },
+      {
+        "id": "FTailwind",
+      },
+      {
+        "id": "FAccessible",
+      },
+      {
+        "id": "FOfficial",
+      },
+      {
+        "id": "FVue",
+      },
+      {
+        "id": "FReact",
+      },
+    ],
+  },
+  {
+    "name": "HyperUI",
+    "logo": "hyperui.ico",
+    "url": "https://hyperui.dev/",
+    "componentCount": 47,
+    "repoOwner": "markmead",
+    "repoName": "hyperui",
+    "filterMatchings": [
+      {
+        "id": "FMobile",
+      },
+      {
+        "id": "FAccessible",
+      },
+      {
+        "id": "FStyled",
+      },
+      {
+        "id": "FPasted",
+      },
+      {
+        "id": "FCSS",
+      },
+      {
+        "id": "FComponents",
+      },
+      {
+        "id": "FTailwind",
+      },
+      {
+        "id": "FVue",
+      },
+      {
+        "id": "FFree",
+      },
+      {
+        "id": "FReact",
+      },
+    ],
+    "nbStars": 8761,
+  },
+  {
+    "name": "Naive UI",
+    "logo": "naiveui.svg",
+    "url": "https://www.naiveui.com/",
+    "repoOwner": "tusen-ai",
+    "repoName": "naive-ui",
+    "package": "naive-ui",
+    "componentCount": 88,
+    "filterMatchings": [
+      {
+        "id": "FVue",
+      },
+      {
+        "id": "FTyped",
+      },
+      {
+        "id": "FThemeGenerator",
+      },
+      {
+        "id": "FImported",
+      },
+      {
+        "id": "FComponents",
+      },
+      {
+        "id": "FStyled",
+      },
+      {
+        "id": "FFree",
+      },
+      {
+        "id": "FSemanticColors",
+      },
+      {
+        "id": "FForm",
+      },
+    ],
+    "nbStars": 15499,
+    "nbDownloads": 36928,
+  },
+  {
+    "name": "Flowbite Vue",
+    "logo": "flowbite-vue.svg",
+    "url": "https://flowbite-vue.com",
+    "repoOwner": "themesberg",
+    "repoName": "flowbite-vue",
+    "package": "flowbite-vue",
+    "componentCount": 37,
+    "filterMatchings": [
+      {
+        "id": "FMobile",
+      },
+      {
+        "id": "FStyled",
+      },
+      {
+        "id": "FImported",
+      },
+      {
+        "id": "FComponents",
+      },
+      {
+        "id": "FTailwind",
+      },
+      {
+        "id": "FFree",
+      },
+      {
+        "id": "FFigma",
+      },
+      {
+        "id": "FVue",
+      },
+    ],
+    "nbStars": 687,
+    "nbDownloads": 7816,
+  },
+  {
+    "name": "Vant",
+    "logo": "vant.png",
+    "url": "https://vant-ui.github.io/vant",
+    "repoOwner": "youzan",
+    "repoName": "vant",
+    "package": "vant",
+    "componentCount": 81,
+    "filterMatchings": [
+      {
+        "id": "FMobile",
+      },
+      {
+        "id": "FStyled",
+      },
+      {
+        "id": "FImported",
+      },
+      {
+        "id": "FComponents",
+      },
+      {
+        "id": "FFree",
+      },
+      {
+        "id": "FFigma",
+      },
+      {
+        "id": "FAccessible",
+      },
+      {
+        "id": "FSemanticColors",
+      },
+      {
+        "id": "FVue",
+      },
+      {
+        "id": "FForm",
+      },
+      {
+        "id": "FTyped",
+      },
+      {
+        "id": "FDarkMode",
+      },
+    ],
+    "nbStars": 22956,
+    "nbDownloads": 52024,
+  },
+  {
+    "name": "Vant Weapp",
+    "logo": "vant.png",
+    "url": "https://vant-ui.github.io/vant-weapp",
+    "repoOwner": "youzan",
+    "repoName": "vant-weapp",
+    "package": "@vant/weapp",
+    "componentCount": 54,
+    "filterMatchings": [
+      {
+        "id": "FMiniProgram",
+      },
+      {
+        "id": "FStyled",
+      },
+      {
+        "id": "FImported",
+      },
+      {
+        "id": "FComponents",
+      },
+      {
+        "id": "FFree",
+      },
+      {
+        "id": "FFigma",
+      },
+      {
+        "id": "FSemanticColors",
+      },
+      {
+        "id": "FForm",
+      },
+      {
+        "id": "FTyped",
+      },
+    ],
+    "nbStars": 17573,
+    "nbDownloads": 1908,
+  },
+  {
+    "name": "Vuestic UI",
+    "logo": "vuestic-ui.png",
+    "url": "https://ui.vuestic.dev",
+    "repoOwner": "epicmaxco",
+    "repoName": "vuestic-ui",
+    "package": "vuestic-ui",
+    "componentCount": 70,
+    "filterMatchings": [
+      {
+        "id": "FMobile",
+      },
+      {
+        "id": "FAccessible",
+      },
+      {
+        "id": "FComponents",
+      },
+      {
+        "id": "FStyled",
+      },
+      {
+        "id": "FFree",
+      },
+      {
+        "id": "FSemanticColors",
+      },
+      {
+        "id": "FImported",
+      },
+      {
+        "id": "FRoadmap",
+      },
+      {
+        "id": "FDarkMode",
+      },
+      {
+        "id": "FVue",
+      },
+      {
+        "id": "FForm",
+      },
+      {
+        "id": "FTyped",
+      },
+    ],
+    "nbStars": 3347,
+    "nbDownloads": 3071,
+  },
+  {
+    "name": "Chakra UI",
+    "logo": "chakra-ui.png",
+    "url": "https://v2.chakra-ui.com/",
+    "repoOwner": "chakra-ui",
+    "repoName": "chakra-ui",
+    "package": "@chakra-ui/react",
+    "componentCount": 62,
+    "filterMatchings": [
+      {
+        "id": "FReact",
+      },
+      {
+        "id": "FTailwind",
+      },
+      {
+        "id": "FImported",
+      },
+      {
+        "id": "FMobile",
+      },
+      {
+        "id": "FAccessible",
+      },
+      {
+        "id": "FComponents",
+      },
+      {
+        "id": "FStyled",
+      },
+      {
+        "id": "FFree",
+      },
+      {
+        "id": "FSemanticColors",
+      },
+      {
+        "id": "FThemeGenerator",
+      },
+      {
+        "id": "FRoadmap",
+      },
+      {
+        "id": "FDarkMode",
+      },
+      {
+        "id": "FForm",
+      },
+      {
+        "id": "FFigma",
+      },
+      {
+        "id": "FTyped",
+      },
+    ],
+    "nbStars": 3347,
+    "nbDownloads": 3071,
+  },
+  {
+    "name": "Aceternity UI",
+    "logo": "aceternity-ui.png",
+    "url": "https://ui.aceternity.com/",
+    "componentCount": 53,
+    "filterMatchings": [
+      {
+        "id": "FReact",
+      },
+      {
+        "id": "FMobile",
+      },
+      {
+        "id": "FTailwind",
+      },
+      {
+        "id": "FStyled",
+      },
+      {
+        "id": "FFree",
+      },
+      {
+        "id": "FPasted",
+      },
+      {
+        "id": "FAccessible",
+      },
+      {
+        "id": "FSemanticColors",
+      },
+      {
+        "id": "FDarkMode",
+      },
+    ],
+    "nbStars": 3347,
+    "nbDownloads": 3071,
+  },
+  {
+    "name": "Wired Elements",
+    "logo": "wired-elements.png",
+    "url": "https://wiredjs.com/",
+    "repoOwner": "rough-stuff",
+    "repoName": "wired-elements",
+    "package": "wired-elements",
+    "componentCount": 22,
+    "filterMatchings": [
+      {
+        "id": "FReact",
+      },
+      {
+        "id": "FVue",
+      },
+      {
+        "id": "FMobile",
+      },
+      {
+        "id": "FStyled",
+      },
+      {
+        "id": "FImported",
+      },
+      {
+        "id": "FComponents",
+      },
+      {
+        "id": "FFree",
+      },
+      {
+        "id": "FAccessible",
+      },
+      {
+        "id": "FTyped",
+      },
+    ],
+    "nbStars": 3347,
+    "nbDownloads": 3071,
+  },
+  {
+    "name": "PrimeReact",
+    "logo": "primereact.ico",
+    "url": "https://mui.com/material-ui/",
+    "repoOwner": "primefaces",
+    "repoName": "primereact",
+    "package": "primereact",
+    "componentCount": 94,
+    "filterMatchings": [
+      {
+        "id": "FMobile",
+      },
+      {
+        "id": "FStyled",
+      },
+      {
+        "id": "FUnstyled",
+      },
+      {
+        "id": "FImported",
+      },
+      {
+        "id": "FTailwind",
+      },
+      {
+        "id": "FComponents",
+      },
+      {
+        "id": "FReact",
+      },
+      {
+        "id": "FFree",
+      },
+      {
+        "id": "FAccessible",
+      },
+      {
+        "id": "FBuiltinThemes",
+      },
+      {
+        "id": "FThemeGenerator",
+      },
+      {
+        "id": "FDarkMode",
+      },
+      {
+        "id": "FFigma",
+      },
+      {
+        "id": "FSemanticColors",
+      },
+      {
+        "id": "FRoadmap",
+      },
+      {
+        "id": "FRTLSupport",
+      },
+      {
+        "id": "FForm",
+      },
+      {
+        "id": "FTyped",
+      },
+    ],
+    "nbStars": 90823,
+    "nbDownloads": 1391041,
+  },
+  {
+    "name": "Mantine",
+    "logo": "mantine.svg",
+    "url": "https://mantine.dev/",
+    "repoOwner": "mantinedev",
+    "repoName": "mantine",
+    "package": "mantine",
+    "componentCount": 99,
+    "filterMatchings": [
+      {
+        "id": "FMobile",
+      },
+      {
+        "id": "FStyled",
+      },
+      {
+        "id": "FImported",
+      },
+      {
+        "id": "FComponents",
+      },
+      {
+        "id": "FReact",
+      },
+      {
+        "id": "FFree",
+      },
+      {
+        "id": "FAccessible",
+      },
+      {
+        "id": "FBuiltinThemes",
+      },
+      {
+        "id": "FThemeGenerator",
+      },
+      {
+        "id": "FDarkMode",
+      },
+      {
+        "id": "FFigma",
+      },
+      {
+        "id": "FSemanticColors",
+      },
+      {
+        "id": "FRTLSupport",
+      },
+      {
+        "id": "FForm",
+      },
+      {
+        "id": "FTyped",
+      },
+    ],
+    "nbStars": 90823,
+    "nbDownloads": 1391041,
+  },
+]
+
+
+  async function fetchLibraryData(libraries) {
+    for (let library of libraries) {
+      // Fetch GitHub stars
+      if (library.repoOwner && library.repoName) {
+        try {
+          const githubResponse = await fetch(`https://api.github.com/repos/${ library.repoOwner }/${ library.repoName }`)
+          if (!githubResponse.ok) {
+            throw new Error(`HTTP error! status: ${ githubResponse.status }`)
+          }
+          const githubData = await githubResponse.json()
+          library.nbStars = githubData.stargazers_count
+        } catch (error) {
+          console.error(`Error fetching GitHub data for ${ library.name }:`, error.message)
+          library.nbStars = null
+        }
+      }
+
+      // Fetch NPM downloads
+      if (library.package) {
+        try {
+          const npmResponse = await fetch(`https://api.npmjs.org/downloads/point/last-week/${ library.package }`)
+          if (!npmResponse.ok) {
+            throw new Error(`HTTP error! status: ${ npmResponse.status }`)
+          }
+          const npmData = await npmResponse.json()
+          library.nbDownloads = npmData.downloads
+        } catch (error) {
+          console.error(`Error fetching NPM data for ${ library.name }:`, error.message)
+          library.nbDownloads = null
+        }
+      }
+    }
+
+    return libraries
+  }
+
+  // Use the function
+  fetchLibraryData(libraries)
+    .then(updatedLibraries => {
+      console.log(JSON.stringify(updatedLibraries, null, 2))
+    })
+    .catch(error => {
+      console.error("Error:", error)
+    })
+  console.info(libraries.length)
+</script>
+</body>
+</html>
