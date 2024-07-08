@@ -1,74 +1,103 @@
-# UI Lib Picker for Vue 3 / Nuxt 3
+# UILibHub
 
-Choosing the right UI library is hard! There are many things to consider. This project is a simple tool to have an overview of different UI frameworks, and help you pick the right one.
+![UILibHub](./docs/banner.jpg)
 
-[![social preview](https://ui-libs.vercel.app/img/social_small.png)](https://ui-libs.vercel.app/)
+English | [中文](./README-zh.md)
 
-### How does it work?
+Welcome to contribute to [UILibHub](https://uilibhub.com)! You can:
+- Recommend or self-nominate UI libraries
+- Submit websites that use UI libraries already listed on our platform (to showcase as examples)
 
-- Hover features to know about them, and click them to filter libraries which implement it
-- For any library, you can see the detail of available components.
+Please share your suggestions by submitting an [Issue](https://github.com/aidevtoolkit/uilibhub/issues).
 
-## Contributions
+## UI Library Submission Format
+If you're submitting a UI library, please use the following format:
 
-### How to Contribute
+```json
+{
+  "name": "Library Name",
+  "url": "Official Website",
+  "githubRepoUrl": "GitHub Repository Link",
+  "npmPackageUrl": "npm Package Link",
+  "componentCount": Number of Components,
+  "filterMatchings": {
+    // Feature list, true indicates support, false indicates no support
+  }
+}
+```
 
-Contributions are very welcome especially because UI libraries change a lot over time. In particular, here are particularly useful contributions:
+Here's an example submission for Material UI:
 
-- Editing existing content (new components for an existing UI)
-- Suggesting a new filter
-- Improving the tool itself
+```json
+{
+  "name": "Material UI",
+  "url": "https://mui.com",
+  "githubRepoUrl": "https://github.com/mui/material-ui",
+  "npmPackageUrl": "https://www.npmjs.com/package/@mui/material",
+  "componentCount": 59,
+  "filterMatchings": {
+    "FReact": true,
+    "FVue": true,
+    "FMiniProgram": false,
+    "FMobile": true,
+    "FStyled": true,
+    "FUnstyled": false,
+    "FImported": true,
+    "FPasted": false,
+    "FComponents": true,
+    "FCSS": false,
+    "FTailwind": true,
+    "FFree": true,
+    "FAccessible": true,
+    "FBuiltinThemes": true,
+    "FThemeGenerator": true,
+    "FDarkMode": true,
+    "FSemanticColors": true,
+    "FFigma": true,
+    "FOfficial": false,
+    "FRoadmap": true,
+    "FRTLSupport": true,
+    "FTyped": true,
+    "FForm": true
+  }
+}
+```
 
-There is no database. To suggest a data update, simply change data into `data/` folder and make a PR.
+Detailed explanations of `filterMatchings`:
+- React：Made for React framework.
+- Vue：Made for Vue framework.
+- Mini Program：Made for Mini Program.
+- Mobile：Mobile-friendly component library support.
+- Tailwind CSS：The library uses Tailwind CSS itself and allows you to use it to customize components. As a Tailwind CSS user, this allows to keep a unique tool for all your styling.
+- Styled：Styled components come with opinated style. You usually customize them by overriding these styles.
+- Unstyled：Unstyled components come with no style and force you to write your own.
+- Imported：You depends on an external library from which you import components. You benefits from library updates but can not directly customize components since it's not your own code.
+- Pasted：You depends on no external library and need to copy paste component code into your own project. After pasting the code, it's yours and you can customize it as you want. However, you can't benefit from the updates automatically.
+- Components：Provide components handling both logic and stying (or logic only if unstyled), but it is coupled to the Vue/React framework.
+- CSS only：Only provide CSS classes to inject into your own components. You get no logic, but the library can be used with any framework (not only Vue/React).
+- Free：The UI Library is entirely free for all available components.
+- Fully Accessible：All components are designed with accessibility in mind.
+- Built-in Themes：Provide different themes ready to be used.
+- Theme Generator：Provide a tool to help developers generate new themes in an easy way.
+- Dark Mode：Components are designed to support both a light and dark version.
+- Semantic Colors：Colors can be associated with particular meanings, like 'primary', 'secondary', etc.
+- Figma files：Figma is the leading design tool. Figma files contain the same components that the UI Library, so that designers can create designs without coding skills.
+- Official：Made by a team responsible for managing a framework itself.
+- Public Roadmap：A public roadmap is available to help you see next library features.
+- RTL support：Ability to display text that is written from right to left (Arabic, Hebrew, etc.)
+- Fully Typed：Provided components are all typed to help developers with auto-completion and potential errors.
+- Form Helpers：Provided tools or examples for integration with form management libraries (Vee-Validate, Zod, Yup, etc.)
 
-### How to setup the project on your own machine
+## Website Using UI Library Submission
+If you're submitting a website that uses a UI library already listed on our platform as an example, please provide the following information:
+- Website Name
+- Website URL
+- Name of the UI Library used
+- Brief Description (optional): Explain how the website utilizes the UI library or its notable features
 
-The project itself is a Nuxt 3 project using Nuxt UI and Tailwind CSS.
+We look forward to your contributions to help enrich the UILibHub resource library!
 
-This repository is based on a [Dev Container](https://code.visualstudio.com/docs/devcontainers/containers). If you're using VS Code, you can run this project easily on your own machine using the `Clone Repository` command on your IDE.
+## Other Things
+you can contact me at X(Twitter): https://x.com/luobogooooo
 
-Once installed, run `npm run dev` to start the project.
-
-## FAQ
-
-### Why Library X is not listed?
-
-This tool is **made to help** people make a choice. A huge list of every single UI libs rather than a currated list may be counterproductive, while I understand it can feel _unfair_ or _frustrating_ that some libraries are absent of this list.
-Besides, adding more libraries increases the maintenance work and the likelihood of having outdated information.
-
-Here are some reasons that automatically discard the library to be listed:
-
-- It does not support the latest Vue or Nuxt version.
-- It seems unmaintained (e.g., [iView](https://github.com/iview/iview))
-- It looks like more an "in progress" that final work
-- It aims to mirror Android / iOS UIs (e.g., [Ionic Framework](https://ionicframework.com/), [Framework7](https://framework7.io/)).
-
-Here are some (potentially subjective) reasons that could discard the library to be listed:
-
-- It is not popular enough and doesn't bring anything new or cool to the table (specific component or feature, very high quality, ...)
-- Majority of discussions (PR, issues) are in Chinese.
-
-With all that being said, I'm open to discussion and new libraries evaluation, so feel free to open a PR.
-
-### Why Component X is not listed?
-
-- It's too basic to be relevant (e.g., a Loading Spinner)
-- It's a Group component (e.g., a Button Group)
-- It's mobile only (e.g., Pull To Refresh)
-- It's listed with a different name (libraries don't always use the exact same names for same components)
-- It's a "block" (a composition of different UI components like a Hero or a Nav bar) rather than a component
-- It's a pure utility which could or should live in a collection of utilities like [VueUse](https://vueuse.org/).
-- It's a broad familiy of dedicated components that make sense to have apart (e.g. Charts).
-
-## About me
-
-I'm David, 35, living in Paris, and <b>available for hire</b>.
-Visit [my website](https://david-dahan.com) to know more about me, or [contact me](https://david-dahan.com/contact).
-
-### Want to support?
-
-If you want to show your support, you can [buy me a coffee](https://www.buymeacoffee.com/ddahan), it will be very appreciated.
-
-### Disclaimer
-
-While every effort has been made to ensure the accuracy of the information provided, the author assumes no responsibility for any errors or omissions.
+if this project is helpful to you, [buy me a coffee](https://ko-fi.com/luobogor).
