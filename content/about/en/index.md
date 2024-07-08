@@ -5,14 +5,22 @@ title: About Us
 ![UILibHub](/img/banner.jpg)
 
 ## What is UILibHub?
+UILibHub is a resource platform focused on collecting and sharing component libraries for React, Vue, and Mini Programs. We provide the latest and most comprehensive recommendations for component libraries, aiming to help developers efficiently build modern applications. This website is developed based on David Dahan's open-source project [UI Libs](https://github.com/ddahan/ui-libs), with the following major enhancements:
 
-UILibHub is dedicated to collecting and sharing high-quality resources for React, Vue, and Mini Program component libraries. We provide the most up-to-date and comprehensive recommendations for component libraries, empowering developers to efficiently build modern applications. The website is developed based on David Dahan's open-source project [UI Libs](https://github.com/ddahan/ui-libs), to whom we extend our gratitude. We've made the following key modifications to UI Libs:
-
-1. **Added React, mobile, and Mini Program related UI libraries**. We currently feature **over 30** UI libraries.
-2. **Introduced multi-language support**, currently available in Chinese and English, with plans to support more languages in the future.
+### Feature Enhancements
+1. **Expanded Library Collection**: Added UI libraries for React, mobile, and mini programs, currently featuring over **30** high-quality UI libraries.
+2. **Multi-language Support**: Currently supports Chinese and English, with plans to support more languages in the future.
 3. Removed the available component statistics panel for two reasons:
-  1. In real-world development, it's more effective to select components based on filtering criteria such as theme aesthetics, form support, mobile compatibility, etc., rather than fixating on whether Component Library A has a specific component that B doesn't.
-  2. The data for the available component statistics panel is challenging to maintain.
+   1. In actual development, it's better to select components based on filtering criteria such as theme attractiveness, form support, mobile compatibility, etc., rather than fixating on whether library A has a component that library B doesn't.
+   2. The available component statistics panel is difficult to maintain.
+4. **Pagination**: Improves browsing experience for large amounts of data.
+5. **Detail Page Improvements**: Added component library detail pages, including feature introductions, component previews, and related links.
+
+### Technical Optimizations
+1. **Markdown Support**: Use Markdown syntax to write static page content.
+2. **SEO Optimization**: Improved meta tags for each page to enhance search engine visibility.
+3. **Traffic Analytics Integration**: Integrated Google Tag Manager for easy data analysis. Modify `app.vue` and replace `YOUR-GTM-ID` with your own GTM ID.
+
 
 ## Key Features
 
@@ -53,15 +61,33 @@ Welcome to contribute to UILibHub! You can:
 - Recommend or self-recommend a UI library
 - Submit a website that uses a UI library already included on this site (as a UI library example display)
 
-Please refer to the [Project Submission Guide](https://github.com/aidevtoolkit/uilibhub) for submitting a project.
+Please refer to the [Project Submission Guide](https://github.com/aidevtoolkit/uilibhub/docs/submission-guide.md) for submitting a project.
 
-## Frequently Asked Questions
-**Q: Are there plans to open-source UILibHub?**
+## Tech Stack
+- [Nuxt3](https://nuxt.com/): Vue3 server-side rendering framework
+- [Nuxt UI](https://ui.nuxt.com/): UI component library
+- [nuxt/i18n](https://i18n.nuxtjs.org/): Multi-language support
+- [Nuxt Content](https://content.nuxt.com/): Markdown content management
+- [Tailwind CSS](https://tailwindcss.com/): Utility-first CSS framework
+- [TypeScript](https://www.typescriptlang.org/): Static type checking
 
-**A:** We plan to open-source UILibHub in the future. This is currently in the planning stages.
+## What can this open-source template be used for?
+This template is ideal for building various resource navigation websites, such as:
+- Technology tool navigation
+- Learning resource directories
+- Industry solution indexes
+- Design resource libraries
+- Open-source project showcases
 
-**Q: How often is the data updated?**
+It offers powerful filtering functionality, multi-language support, and good SEO optimization, allowing for quick setup of professional navigation websites.
 
-**A:** GitHub star counts and NPM weekly download figures are updated on the first day of each month. Component counts are updated quarterly.
+## FAQ
 
+**Q: How often is UILibHub data updated?**
 
+**A:** GitHub stars and weekly NPM downloads are updated on the 1st of each month, while component counts are updated quarterly.
+
+## Other Things
+you can contact me at X(Twitter): https://x.com/luobogooooo
+
+if this project is helpful to you, [buy me a coffee](https://ko-fi.com/luobogor).
