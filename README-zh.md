@@ -34,8 +34,8 @@ UILibHub 专注收集和分享 React、Vue 和小程序组件库的优质资源�
 - [Nuxt3](https://nuxt.com/)：Vue3 服务端渲染框架
 - [Nuxt UI](https://ui.nuxt.com/)：UI 组件库
 - [nuxt/i18n](https://i18n.nuxtjs.org/)：多语言支持
-- [Nuxt Content](https://content.nuxt.com/)：Markdown 内容管理
-- [Tailwind CSS](https://tailwindcss.com/)：实用优先的 CSS 框架
+- [Nuxt Content](https://content.nuxt.com/)：Markdown 渲染 HTML
+- [Tailwind CSS](https://tailwindcss.com/)：实用 CSS 框架
 - [TypeScript](https://www.typescriptlang.org/)：静态类型检查
 
 ## 这个开源模板可以用来做什么？
