@@ -32,7 +32,7 @@ export default defineI18nConfig(() => ({
       featuresField: "Feature",
       featuresExplanation: "Explanation",
       otherYouMayLike: "Other You May Like",
-      total: 'Total',
+      total: 'Results',
     },
     zh: {
       officialWebsite: "官网",
@@ -64,7 +64,7 @@ export default defineI18nConfig(() => ({
       featuresField: "特性",
       featuresExplanation: "说明",
       otherYouMayLike: "猜你喜欢",
-      total: '总数',
+      total: '个结果',
     },
   },
 }))
