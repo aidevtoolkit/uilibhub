@@ -10,14 +10,14 @@ const { data } = await useAsyncData(
   () => queryContent('about', localCode).findOne()
 )
 
-const { title, description } = data.value
+const { title } = data.value
 const finalTitle = `${title} | UILibHub`
 
 useSeoMeta({
   title: finalTitle,
-  description: description,
+  // description: description,
   ogTitle: finalTitle,
-  ogDescription: description,
+  // ogDescription: description,
 })
 
 </script>

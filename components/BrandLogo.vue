@@ -4,7 +4,7 @@
           <img class="primary-text h-8 w-8"
                alt="UILibHub's logo"
                src="/favicon.png" />
-          <h1 class="text-xl font-bold">UILibHub</h1>
+          <span class="text-xl font-bold">UILibHub</span>
         </NuxtLink>
 </template>
 

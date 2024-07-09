@@ -48,18 +48,18 @@
           <div>
           <h3 class="text-sm mb-2 font-semibold"
               data-dir="false">{{ $t("footerTitle3") }}</h3>
-          <ul class="flex flex-col space-y-2">
-            <li v-for="menuLink in menuLinks" :key="menuLink.href">
-              <NuxtLink
-                :to="localePath(menuLink.href)"
-                :title="menuLink.title"
-                class="dark:text-slate-400 block text-sm text-gray-900"
-              >
-                {{ menuLink.title }}
-              </NuxtLink>
-            </li>
-          </ul>
-        </div>
+            <ul class="flex flex-col space-y-2">
+              <li v-for="menuLink in menuLinks" :key="menuLink.href">
+                <NuxtLink
+                  :to="localePath(menuLink.href)"
+                  :title="menuLink.title"
+                  class="dark:text-slate-400 block text-sm text-gray-900"
+                >
+                  {{ menuLink.title }}
+                </NuxtLink>
+              </li>
+            </ul>
+          </div>
       </div>
     </div>
 
@@ -103,7 +103,7 @@ const menuLinks = computed(() => [
   },
 ])
 
-const productLinks = computed(() =>[
+const productLinks = computed(() => [
   {
     title: t("footerTerms4"),
     href: "https://indiehackertools.net/",

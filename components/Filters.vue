@@ -8,6 +8,12 @@
         to="mailto:info@uilibhub.com"
         size="xl"
       />
+      <NuxtLink to="https://melecode.com/"
+                target="_blank">
+        <img src="/img/mele-banner.png"
+             alt="美乐全栈低代码"
+             class="h-[80px] drop-shadow-lg" />
+      </NuxtLink>
       <UButton
         color="gray"
         variant="ghost"
@@ -16,77 +22,77 @@
         :label="clearFiltersLabel"
         @click="handleClearFiltering"
       />
-  </div>
+    </div>
     <UAccordion
-    :items="accordionSections"
-    color="black"
-    size="xl"
-    variant="ghost"
-    :multiple="true"
-  >
-    <template #mainFeatures>
-      <div class="ml-2 flex flex-col gap-1">
-        <div class="grid grid-cols-2 gap-1">
-          <FilterButton buttonFilterID="FReact" />
-          <FilterButton buttonFilterID="FVue" />
+      :items="accordionSections"
+      color="black"
+      size="xl"
+      variant="ghost"
+      :multiple="true"
+    >
+      <template #mainFeatures>
+        <div class="ml-2 flex flex-col gap-1">
+          <div class="grid grid-cols-2 gap-1">
+            <FilterButton buttonFilterID="FReact" />
+            <FilterButton buttonFilterID="FVue" />
+          </div>
+
+          <div class="grid grid-cols-2 gap-1">
+            <FilterButton buttonFilterID="FMobile" />
+            <FilterButton buttonFilterID="FTailwind" />
+          </div>
+
+          <div class="grid grid-cols-2 gap-1">
+            <FilterButton buttonFilterID="FStyled" />
+            <FilterButton buttonFilterID="FUnstyled" />
+          </div>
+
+          <div class="grid grid-cols-2 gap-1">
+            <FilterButton buttonFilterID="FImported" />
+            <FilterButton buttonFilterID="FPasted" />
+          </div>
+
+          <div class="grid grid-cols-2 gap-1">
+            <FilterButton buttonFilterID="FComponents" />
+            <FilterButton buttonFilterID="FCSS" />
+          </div>
+
+          <div class="grid grid-cols-2 gap-1">
+            <FilterButton buttonFilterID="FMiniProgram" />
+            <FilterButton buttonFilterID="FFree" />
+          </div>
         </div>
+      </template>
 
-         <div class="grid grid-cols-2 gap-1">
-          <FilterButton buttonFilterID="FMobile" />
-          <FilterButton buttonFilterID="FTailwind" />
+      <template #moreFeatures>
+        <div class="ml-2 flex flex-col gap-1">
+          <FilterButton buttonFilterID="FAccessible" />
+          <FilterButton buttonFilterID="FBuiltinThemes" />
+          <FilterButton buttonFilterID="FThemeGenerator" />
+          <FilterButton buttonFilterID="FDarkMode" />
+          <FilterButton buttonFilterID="FSemanticColors" />
+          <FilterButton buttonFilterID="FFigma" />
+          <FilterButton buttonFilterID="FOfficial" />
+          <FilterButton buttonFilterID="FRoadmap" />
+          <FilterButton buttonFilterID="FRTLSupport" />
+          <FilterButton buttonFilterID="FTyped" />
+          <FilterButton buttonFilterID="FForm" />
         </div>
+      </template>
 
-        <div class="grid grid-cols-2 gap-1">
-          <FilterButton buttonFilterID="FStyled" />
-          <FilterButton buttonFilterID="FUnstyled" />
+      <template #availableComponents>
+        <div class="ml-2">
+          <FilterRange rangeFilterID="FNbComponents" />
         </div>
+      </template>
 
-        <div class="grid grid-cols-2 gap-1">
-          <FilterButton buttonFilterID="FImported" />
-          <FilterButton buttonFilterID="FPasted" />
+      <template #popularity>
+        <div class="ml-2 flex flex-col gap-1">
+          <FilterRange rangeFilterID="FNbStars" />
+          <FilterRange rangeFilterID="FNbDownloads" />
         </div>
-
-        <div class="grid grid-cols-2 gap-1">
-          <FilterButton buttonFilterID="FComponents" />
-          <FilterButton buttonFilterID="FCSS" />
-        </div>
-
-        <div class="grid grid-cols-2 gap-1">
-          <FilterButton buttonFilterID="FMiniProgram" />
-          <FilterButton buttonFilterID="FFree" />
-        </div>
-      </div>
-    </template>
-
-    <template #moreFeatures>
-      <div class="ml-2 flex flex-col gap-1">
-        <FilterButton buttonFilterID="FAccessible" />
-        <FilterButton buttonFilterID="FBuiltinThemes" />
-        <FilterButton buttonFilterID="FThemeGenerator" />
-        <FilterButton buttonFilterID="FDarkMode" />
-        <FilterButton buttonFilterID="FSemanticColors" />
-        <FilterButton buttonFilterID="FFigma" />
-        <FilterButton buttonFilterID="FOfficial" />
-        <FilterButton buttonFilterID="FRoadmap" />
-        <FilterButton buttonFilterID="FRTLSupport" />
-        <FilterButton buttonFilterID="FTyped" />
-        <FilterButton buttonFilterID="FForm" />
-      </div>
-    </template>
-
-    <template #availableComponents>
-      <div class="ml-2">
-        <FilterRange rangeFilterID="FNbComponents" />
-      </div>
-    </template>
-
-    <template #popularity>
-      <div class="ml-2 flex flex-col gap-1">
-        <FilterRange rangeFilterID="FNbStars" />
-        <FilterRange rangeFilterID="FNbDownloads" />
-      </div>
-    </template>
-  </UAccordion>
+      </template>
+    </UAccordion>
   </div>
 </template>
 
@@ -122,12 +128,12 @@ const { nbTouchedFilters, clearFiltering } = useFilterStore()
 
 const clearFiltersLabel = computed(() => {
   const count = nbTouchedFilters()
-  const suffix = count === 1 ? '' : 's'
-  return t('clearFilters', { count, suffix })
+  const suffix = count === 1 ? "" : "s"
+  return t("clearFilters", { count, suffix })
 })
 
 const handleClearFiltering = () => {
-  if (nbTouchedFilters() <= 0){
+  if (nbTouchedFilters() <= 0) {
     return
   }
 
