@@ -8,7 +8,7 @@
         to="mailto:info@uilibhub.com"
         size="xl"
       />
-      <NuxtLink to="https://melecode.com/"
+      <NuxtLink to="https://melecode.com?utm_source=uilibhub.com"
                 target="_blank">
         <img src="/img/mele-banner.png"
              alt="美乐全栈低代码"
