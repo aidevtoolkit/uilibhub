@@ -10,7 +10,7 @@ UILibHub focuses on collecting and sharing high-quality resources for React, Vue
 ### Feature Enhancements
 1. **Expanded Library Collection**: Added UI libraries for React, mobile, and mini programs, currently featuring over **30** high-quality UI libraries.
 2. **Multi-language Support**: Currently supports Chinese and English, with plans to support more languages in the future.
-3. Removed the available component statistics panel for two reasons:
+3. **Removed the available component statistics panel for two reasons**:
    1. In actual development, it's better to select components based on filtering criteria such as theme attractiveness, form support, mobile compatibility, etc., rather than fixating on whether library A has a component that library B doesn't.
    2. The available component statistics panel is difficult to maintain.
 4. **Pagination**: Improves browsing experience for large amounts of data.
@@ -40,13 +40,22 @@ For project submissions, please refer to the [Submission Guide](https://github.c
 
 ## What can this open-source template be used for?
 This template is ideal for building various resource navigation websites, such as:
-- Technology tool navigation
-- Learning resource directories
-- Industry solution indexes
+- Tool directories: e.g., AI tool directories, front-end tool directories
+- Learning resource catalogs
 - Design resource libraries
 - Open-source project showcases
 
 It offers powerful filtering functionality, multi-language support, and good SEO optimization, allowing for quick setup of professional navigation websites.
+
+## How to Use?
+Installation & Startup:
+```shell
+npm i
+npm run dev
+```
+
+Deployment:
+You can deploy for free using [Cloudflare Pages](https://pages.cloudflare.com/).
 
 ## Other Things
 you can contact me at X(Twitter): https://x.com/luobogor
