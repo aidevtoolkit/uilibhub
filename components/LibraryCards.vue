@@ -1,7 +1,7 @@
 <template>
   <div class="flex-grow">
     <div class="mt-2.5 mb-8">
-      <span class="font-bold text-primary mr-2">{{ total }}</span>{{ $t('total') }}
+      <span class="font-bold text-primary mr-2">{{ total }}</span>{{ $t("total") }}
     </div>
     <div class="grid grid-cols-1 content-start gap-6 lg:grid-cols-2">
       <LibraryCard
@@ -39,6 +39,11 @@ const props = defineProps({
 const vPage = ref(Number(props.page))
 const total = ref(0)
 const pageCount = ref(10)
+
+watch(() => vPage.value, (val) => {
+  const page = localePath(`/p/${val}`)
+  navigateTo(page)
+})
 
 function paginate(_libraries, _page) {
   // 确保页码为正整数
