@@ -55,7 +55,7 @@ npm run dev
 ```
 
 部署：
-可以使用 [Cloudflare Pages](https://indiehackertools.net/blog/cloudflare-pages-guide-automating-deployment-of-github-projects)免费部署。
+可以使用 [Cloudflare Pages](https://indiehackertools.net/blog/cloudflare-pages-guide-automating-deployment-of-github-projects)免费部署。也可以通过 info@uilibhub.com 联系我付费部署，或进行功能定制。
 
 ## 关于我
 你可以在 X（Twitter）上联系我: https://x.com/luobogooooo
