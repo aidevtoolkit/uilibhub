@@ -9,7 +9,7 @@ UILibHub focuses on collecting and sharing high-quality resources for React, Vue
 
 ### Feature Enhancements
 1. **Expanded Library Collection**: Added UI libraries for React, mobile, and mini programs, currently featuring over **30** high-quality UI libraries.
-2. **Multi-language Support**: Currently supports Chinese and English, with plans to support more languages in the future.
+2. **Multi-language Support**: Currently supports Chinese、English and Japanese, with plans to support more languages in the future.
 3. **Removed the available component statistics panel for two reasons**:
    1. In actual development, it's better to select components based on filtering criteria such as theme attractiveness, form support, mobile compatibility, etc., rather than fixating on whether library A has a component that library B doesn't.
    2. The available component statistics panel is difficult to maintain.
