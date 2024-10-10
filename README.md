@@ -57,6 +57,11 @@ npm run dev
 Deployment:
 You can deploy for free using [Cloudflare Pages](https://pages.cloudflare.com/).
 
+## Sponsor
+### CSS Scan 4.0
+**⚡️ CSS Scan is the fastest and easiest way to check, copy, and edit CSS.** Check the CSS of any element you hover over instantly and copy all its rules with a single click.
+[![CSS Scan](./docs/css-scan-bg.jpg)](https://gumroad.com/a/634407443/fULny)
+
 ## Other Things
 you can contact me at X(Twitter): https://x.com/luobogor
 

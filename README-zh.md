@@ -57,6 +57,11 @@ npm run dev
 部署：
 可以使用 [Cloudflare Pages](https://indiehackertools.net/blog/cloudflare-pages-guide-automating-deployment-of-github-projects)免费部署。
 
+## 赞助
+### CSS Scan 4.0
+**⚡️ CSS Scan 最快、最简单的检查、复制和编辑 CSS 的工具**。 只需将鼠标悬停在任何元素上，即可即时查看其 CSS，并一键复制所有规则。
+[![CSS Scan](./docs/css-scan-bg.jpg)](https://gumroad.com/a/634407443/fULny)
+
 ## 关于我
 你可以在 X（Twitter）上联系我: https://x.com/luobogooooo
 
